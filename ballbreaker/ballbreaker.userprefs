@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewGameButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NewGameScript.cs">
     <Files>
-      <File FileName="Assets/NewGameButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/QuitScript.boo" Line="3" Column="35" />
+      <File FileName="Assets/Scripts/NewGameScript.cs" Line="4" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

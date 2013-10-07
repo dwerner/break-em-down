@@ -85,6 +85,8 @@ GameObject:
   - 33: {fileID: 95725955}
   - 65: {fileID: 95725954}
   - 23: {fileID: 95725953}
+  - 114: {fileID: 95725956}
+  - 114: {fileID: 95725957}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -140,6 +142,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 95725951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &95725956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 95725951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98a2c26af5154f76a9eb89c0404301d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &95725957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 95725951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2788405487b2f4a24981ad489a861b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  highlightMaterial: {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
 --- !u!1 &865891519
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +460,7 @@ GameObject:
   - 65: {fileID: 1508307226}
   - 23: {fileID: 1508307225}
   - 114: {fileID: 1508307229}
+  - 114: {fileID: 1508307230}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -500,6 +527,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cf2da4d859740858f3b0a74652fc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1508307230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1508307224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2788405487b2f4a24981ad489a861b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  highlightMaterial: {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
 --- !u!1 &1791865364
 GameObject:
   m_ObjectHideFlags: 0
