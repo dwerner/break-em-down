@@ -1,18 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/QuitScript.boo">
-    <Files>
-      <File FileName="Assets/Scripts/NewGameScript.cs" Line="4" Column="27" />
-      <File FileName="Assets/Scripts/QuitScript.boo" Line="6" Column="21" />
-      <File FileName="Assets/Scripts/Button.boo" Line="13" Column="17" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-Boo" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="QuitScript.boo" selected="True" />
+                <Node name="Button.boo" selected="True" />
               </Node>
             </Node>
           </Node>
