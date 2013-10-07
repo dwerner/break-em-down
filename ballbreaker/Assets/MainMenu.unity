@@ -465,10 +465,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121832332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -99.0885544, y: 67.2639465, z: .647293389}
+  m_LocalPosition: {x: -74.4643402, y: 9.44387054, z: 7.48057556}
   m_LocalScale: {x: 5.25234699, y: 4.35291719, z: 5.25234699}
   m_Children: []
-  m_Father: {fileID: 1791865365}
+  m_Father: {fileID: 1508390699}
 --- !u!102 &1121832334
 TextMesh:
   serializedVersion: 3
@@ -624,6 +624,34 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 0
   m_RichText: 1
+--- !u!1 &1508390698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1508390699}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1508390699
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1508390698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.0953197, y: 41.4067268, z: -7.48057556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1121832333}
+  - {fileID: 1995864564}
+  m_Father: {fileID: 0}
 --- !u!1 &1791865364
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,8 +681,6 @@ Transform:
   - {fileID: 1508307228}
   - {fileID: 965646013}
   - {fileID: 975442020}
-  - {fileID: 1121832333}
-  - {fileID: 1995864564}
   m_Father: {fileID: 0}
 --- !u!1 &1995864563
 GameObject:
@@ -680,10 +706,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1995864563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.8004951, y: 71.1562653, z: .647293389}
+  m_LocalPosition: {x: -25.1762943, y: 13.3361893, z: 7.48057556}
   m_LocalScale: {x: 5.25234699, y: 4.35291719, z: 5.25234699}
   m_Children: []
-  m_Father: {fileID: 1791865365}
+  m_Father: {fileID: 1508390699}
 --- !u!102 &1995864565
 TextMesh:
   serializedVersion: 3
