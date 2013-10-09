@@ -5,35 +5,59 @@ using System.Collections;
 public class PlayerPaddle : MonoBehaviour {
 	
 	public float speed = 50; 
-	/*
-	public static float zPos; // numbers always initialize to 0 - not like in C
-	public float yPos;
-	public float xPos;
-	
-	public float xBoundLeft; // i edited the properties in the inspector but they did not carry over here
-	public float xBoundRight; // when do they get set? <- in edit mode, but no initialization is needed. if you edit in the 
-	public float yBoundTop; // 
-	*/
-	private Transform _t;
-/*	
-	void Awake() {
-		_t = transform; // This is silly. I know the guy was doing it in the tut, but there's no property; this.transform is a field. No optimization to be had here.
-	}
-*/
+	public float velocity;
+
 	//Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
 	IEnumerator Start () {
-		float velocity = 0.0f;
 		while (true) {
 			var h = Input.GetAxis("Horizontal");
 
 			if (h != 0) {
-				Debug.Log (h);
 				this.rigidbody.AddRelativeForce (new Vector3 (h, 0.0f, 0.0f) * Time.deltaTime * speed); 
 			} else {
-				this.rigidbody.AddForce(this.rigidbody.velocity * -1);
+				this.rigidbody.velocity /= 2;
 			}
 			yield return null;
 		}
 	}
+
+	/*
+	public LayerMask layerMask; //make sure we aren't in this layer 
+	public float skinWidth = 0.1f; //probably doesn't need to be changed 
+ 
+	private float minimumExtent; 
+	private float partialExtent; 
+	private float sqrMinimumExtent; 
+	private Vector3 previousPosition; 
+	private Rigidbody myRigidbody; 
+ 
+ 
+	//initialize values 
+	void Awake() { 
+		myRigidbody = rigidbody; 
+		previousPosition = myRigidbody.position; 
+		minimumExtent = Mathf.Min(Mathf.Min(collider.bounds.extents.x, collider.bounds.extents.y), collider.bounds.extents.z); 
+		partialExtent = minimumExtent * (1.0f - skinWidth); 
+		sqrMinimumExtent = minimumExtent * minimumExtent; 
+	} 
+ 
+	void FixedUpdate() { 
+	   //have we moved more than our minimum extent? 
+	   Vector3 movementThisStep = myRigidbody.position - previousPosition; 
+	   float movementSqrMagnitude = movementThisStep.sqrMagnitude;
+ 
+		if (movementSqrMagnitude > sqrMinimumExtent) { 
+			float movementMagnitude = Mathf.Sqrt(movementSqrMagnitude);
+			RaycastHit hitInfo; 
+
+			//check for obstructions we might have missed 
+			if (Physics.Raycast (previousPosition, movementThisStep, out hitInfo, movementMagnitude, layerMask.value)) {
+				myRigidbody.position = hitInfo.point - (movementThisStep / movementMagnitude) * partialExtent; 
+			}
+		} 
+ 
+	   previousPosition = myRigidbody.position; 
+	}
+	*/
 	
 }
