@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\MenuBall.cs" />
      <Compile Include="Assets\Scripts\NewGameScript.cs" />
+     <Compile Include="Assets\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Scripts\PlayerPaddle.cs" />
      <Compile Include="Assets\Scripts\QuitScript.cs" />
   </ItemGroup>

@@ -4,8 +4,10 @@ using System.Collections;
 
 public class PlayerPaddle : MonoBehaviour {
 	
-	public float speed = 50; 
-	public float velocity;
+	public float speed = 20; 
+
+	public float leftLimit = -6f;
+	public float rightLimit = 6f;
 
 	//Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
 	IEnumerator Start () {
@@ -13,51 +15,29 @@ public class PlayerPaddle : MonoBehaviour {
 			var h = Input.GetAxis("Horizontal");
 
 			if (h != 0) {
-				this.rigidbody.AddRelativeForce (new Vector3 (h, 0.0f, 0.0f) * Time.deltaTime * speed); 
+				var move = h * Time.deltaTime * speed;
+
+				/* 
+				 * For the paddle, perhaps it does make more sense to control via position, and limit based on a static width.
+				 * The alternative is raycasting, and predicting the movement of the object prior to it moving, and stopping it.
+				 * 
+				 * Otherwise we just get intersections, and they don't feel very realistic. 
+				 * 
+				 * *Note that changing the masses of the targets did have an effect on the kinds of intersections that were allowed before the object rebounds.
+				 */
+				if (Mathf.Abs (h) > 0) {
+					if (!(this.rigidbody.position.x + move < this.leftLimit) && 
+					    !(this.rigidbody.position.x + move > this.rightLimit)) { 
+										
+						this.rigidbody.position += new Vector3 (move, 0.0f, 0.0f);
+					}
+				}
 			} else {
-				this.rigidbody.velocity /= 2;
+				this.rigidbody.velocity *= 0;
 			}
+
 			yield return null;
 		}
 	}
 
-	/*
-	public LayerMask layerMask; //make sure we aren't in this layer 
-	public float skinWidth = 0.1f; //probably doesn't need to be changed 
- 
-	private float minimumExtent; 
-	private float partialExtent; 
-	private float sqrMinimumExtent; 
-	private Vector3 previousPosition; 
-	private Rigidbody myRigidbody; 
- 
- 
-	//initialize values 
-	void Awake() { 
-		myRigidbody = rigidbody; 
-		previousPosition = myRigidbody.position; 
-		minimumExtent = Mathf.Min(Mathf.Min(collider.bounds.extents.x, collider.bounds.extents.y), collider.bounds.extents.z); 
-		partialExtent = minimumExtent * (1.0f - skinWidth); 
-		sqrMinimumExtent = minimumExtent * minimumExtent; 
-	} 
- 
-	void FixedUpdate() { 
-	   //have we moved more than our minimum extent? 
-	   Vector3 movementThisStep = myRigidbody.position - previousPosition; 
-	   float movementSqrMagnitude = movementThisStep.sqrMagnitude;
- 
-		if (movementSqrMagnitude > sqrMinimumExtent) { 
-			float movementMagnitude = Mathf.Sqrt(movementSqrMagnitude);
-			RaycastHit hitInfo; 
-
-			//check for obstructions we might have missed 
-			if (Physics.Raycast (previousPosition, movementThisStep, out hitInfo, movementMagnitude, layerMask.value)) {
-				myRigidbody.position = hitInfo.point - (movementThisStep / movementMagnitude) * partialExtent; 
-			}
-		} 
- 
-	   previousPosition = myRigidbody.position; 
-	}
-	*/
-	
 }
