@@ -1,23 +1,23 @@
 using System;
-
-namespace AssemblyCSharp {
-	public class MainMenuButton	{
-		
-		public Material defaultMaterial;
-		public Material highlightMaterial;
+using System.Collections;
+using UnityEngine;
 
 
-		public void OnMouseEnter(){
-			self.renderer.material = highlightMaterial;
-		}
+public class MainMenuButton : MonoBehaviour	{
+	
+	public Material defaultMaterial;
+	public Material highlightMaterial;
+
+
+	public void OnMouseEnter(){
+		this.renderer.material = highlightMaterial;
+	}
+	
+	public void OnMouseExit(){
+		this.renderer.material = defaultMaterial;
+	}
+	
+	public MainMenuButton () {
 		
-		public void OnMouseExit(){
-			self.renderer.material = defaultMaterial;
-		}
-		
-		public MainMenuButton () {
-			
-		}
 	}
 }
-

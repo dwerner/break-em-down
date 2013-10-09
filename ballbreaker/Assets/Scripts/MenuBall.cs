@@ -39,18 +39,16 @@ public class MenuBall : MonoBehaviour {
 		}
 		
 	}
-	
+	/* // This was just a trial thing anyway - perhaps we could make this scale-independent
 	IEnumerator OnCollisionEnter (Collision c){
-		
-
-		
 		var sizes = new List<float>() {
 		1.0f,1.1f,1.2f,1.3f,1.2f,1.1f,1.0f
 		};
 		
 		foreach (var i in sizes){
-			transform.localScale = new Vector3(i,i,i) * 10;
+			transform.localScale = new Vector3(i,i,i);
 			yield return 0;
 		}
 	}
+	*/
 }

@@ -1,17 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace AssemblyCSharp {
-	public class QuitScript {
+public class QuitScript : MonoBehaviour {
+	
+	public void OnMouseUpAsButton(){
+		Handheld.Vibrate();
+		Application.Quit();
+	}
+	
+	public QuitScript () {
 		
-		public void OnMouseUpAsButton(){
-			Handheld.Vibrate();
-			Application.Quit();
-		}
-		
-		public QuitScript () {
-			
-		}
 	}
 }
+
 
