@@ -45,6 +45,12 @@ public class PlayerPaddle : MonoBehaviour {
 				this.rigidbody.velocity *= 0;
 			}
 
+
+			/*
+			 * Bug here: the values from Input.touches seem to be 1:1 with device pixels
+			 * So the paddle moves with an offset of 1/2 the x+y resolution.
+			 * 
+			 */
 			if (Input.touches.Count() > 0) {
 				var delta = Input.touches[0].position;
 				Vector3 v3 = delta;

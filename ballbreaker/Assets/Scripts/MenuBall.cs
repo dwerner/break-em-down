@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MenuBall : MonoBehaviour {
 	
-	public float minimumSpeed = 5f;
+	public float minimumSpeed = 10f;
 	public float maxSpeed = 25f;
 	public float speed = 0f;
 	
