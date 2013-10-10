@@ -87,7 +87,6 @@ GameObject:
   - 23: {fileID: 95725953}
   - 114: {fileID: 95725957}
   - 54: {fileID: 95725958}
-  - 114: {fileID: 95725956}
   m_Layer: 0
   m_Name: New Game Button
   m_TagString: Untagged
@@ -144,7 +143,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 95725951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &95725956
+--- !u!114 &95725957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -155,19 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cf2da4d859740858f3b0a74652fc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &95725957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 95725951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2788405487b2f4a24981ad489a861b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  highlightMaterial: {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
 --- !u!54 &95725958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,7 +264,6 @@ GameObject:
   - 23: {fileID: 496499457}
   - 114: {fileID: 496499455}
   - 54: {fileID: 496499453}
-  - 114: {fileID: 496499454}
   m_Layer: 0
   m_Name: Quit Button
   m_TagString: Untagged
@@ -313,17 +298,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &496499454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 496499451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98a2c26af5154f76a9eb89c0404301d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &496499455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,11 +306,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 496499451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2788405487b2f4a24981ad489a861b1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 75520ef497c5733478f3c0c4b32dd0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  highlightMaterial: {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
 --- !u!23 &496499457
 Renderer:
   m_ObjectHideFlags: 0

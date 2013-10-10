@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using System.Collections.Generic;
 using System.Collections;
 
@@ -8,6 +9,7 @@ public class PlayerPaddle : MonoBehaviour {
 
 	public float leftLimit = -6f;
 	public float rightLimit = 6f;
+	public bool touchesExist;
 
 	//Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
 	IEnumerator Start () {
@@ -34,6 +36,20 @@ public class PlayerPaddle : MonoBehaviour {
 				}
 			} else {
 				this.rigidbody.velocity *= 0;
+			}
+
+
+			if (Input.touchCount > 1){
+				var touches = (from x in Input.touches
+				               where x.phase == TouchPhase.Moved
+				               select x).ToArray();
+
+				if (touches.Count() > 0) {
+					touchesExist = true;
+					this.rigidbody.position += new Vector3 (
+						this.rigidbody.position.x + touches [0].deltaPosition.x,
+						this.rigidbody.position.y + touches [0].deltaPosition.y, 0.0f);
+				}
 			}
 
 			yield return null;
