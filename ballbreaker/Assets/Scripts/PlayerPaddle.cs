@@ -11,6 +11,8 @@ public class PlayerPaddle : MonoBehaviour {
 	public float rightLimit = 6f;
 	public bool touchesExist;
 
+
+
 	//Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
 	IEnumerator Start () {
 		while (true) {
@@ -39,18 +41,13 @@ public class PlayerPaddle : MonoBehaviour {
 			}
 
 
-			if (Input.touchCount > 1){
-				var touches = (from x in Input.touches
-				               where x.phase == TouchPhase.Moved
-				               select x).ToArray();
 
-				if (touches.Count() > 0) {
-					touchesExist = true;
-					this.rigidbody.position += new Vector3 (
-						this.rigidbody.position.x + touches [0].deltaPosition.x,
-						this.rigidbody.position.y + touches [0].deltaPosition.y, 0.0f);
-				}
+			if (Input.touches.Count() > 0) {
+				var delta = Input.touches[0].deltaPosition;
+				Vector3 v3 = delta;
+				rigidbody.position += v3 / 1000.0f;
 			}
+
 
 			yield return null;
 		}
