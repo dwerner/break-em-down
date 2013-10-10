@@ -51,6 +51,7 @@ public class PlayerPaddle : MonoBehaviour {
 				rigidbody.position = v3 / 100f;
 			}
 
+			Debug.Log (width);
 
 			yield return null;
 		}
