@@ -7,8 +7,8 @@ public class PlayerPaddle : MonoBehaviour {
 	
 	public float speed = 20; 
 
-	public float leftLimit = -6f;
-	public float rightLimit = 6f;
+	public float leftLimit = -7.5f;
+	public float rightLimit = 7.5f;
 	public bool touchesExist;
 
 

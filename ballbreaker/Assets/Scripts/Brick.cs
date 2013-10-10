@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Brick : MonoBehaviour {
 
-	int hitPoints =1;
+	public int hitPoints =1;
 
 	IEnumerator OnCollisionEnter (Collision c){
 
@@ -20,7 +20,7 @@ public class Brick : MonoBehaviour {
 			yield return 0;
 		}
 	
-		if (hitPoints == 0) {
+		if (hitPoints <= 0) {
 			this.gameObject.active = false;
 
 		}
