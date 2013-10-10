@@ -9,6 +9,7 @@ public class GameBall : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("Test");
 		rigidbody.AddRelativeForce(new Vector3(0, this.minSpeed, 0));
 	}
 	
@@ -18,6 +19,14 @@ public class GameBall : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
+		this.curSpeed = Vector3.Magnitude(rigidbody.velocity);
+		
+		if (this.curSpeed > this.maxSpeed) {
+			rigidbody.velocity = (rigidbody.velocity) / (this.curSpeed / this.maxSpeed);
+		}
+		else if (this.curSpeed < this.minSpeed) {
+			rigidbody.velocity = (rigidbody.velocity) / (this.curSpeed / this.minSpeed);
+		}
 	}
 	
 	void OnCollisionEnter(Collision col) {
