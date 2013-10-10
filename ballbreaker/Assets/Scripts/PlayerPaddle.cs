@@ -15,11 +15,7 @@ public class PlayerPaddle : MonoBehaviour {
 
 	//Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
 	IEnumerator Start () {
-
-		int height = Screen.resolutions[0].height;
-		int width = Screen.resolutions[0].width;
-
-
+		Vector3 pos = rigidbody.position;
 		while (true) {
 			var h = Input.GetAxis("Horizontal");
 
@@ -53,8 +49,7 @@ public class PlayerPaddle : MonoBehaviour {
 			 */
 			if (Input.touches.Count() > 0) {
 				var delta = Input.touches[0].position;
-				Vector3 v3 = delta;
-				rigidbody.position = v3 / 100f;
+				rigidbody.position = new Vector3((delta.x -640f) / 80f, pos.y, pos.z);
 			}
 
 
