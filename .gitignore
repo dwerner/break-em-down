@@ -1,3 +1,15 @@
 ballbreaker/Library
 ballbreaker/Temp
 ballbreaker/Obj
+ballbreaker/Assembly-CSharp.csproj
+ballbreaker/Assembly-CSharp.pidb
+ballbreaker/Assembly-CSharp-Editor.csproj
+ballbreaker/Assembly-CSharp-Editor.pidb
+ballbreaker/Assembly-CSharp-Editor-vs.csproj
+ballbreaker/Assembly-CSharp-firstpass.csproj
+ballbreaker/Assembly-CSharp-firstpass.pidb
+ballbreaker/Assembly-CSharp-firstpass-vs.csproj
+ballbreaker/Assembly-CSharp-vs.csproj
+ballbreaker/Assembly-UnityScript-firstpass.pidb
+ballbreaker/Assembly-UnityScript-firstpass.unityproj
+ballbreaker/Assembly-UnityScript-firstpass-vs.unityproj
