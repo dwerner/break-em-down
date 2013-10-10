@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Brick.cs" />
      <Compile Include="Assets\Scripts\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\MenuBall.cs" />
      <Compile Include="Assets\Scripts\NewGameScript.cs" />
