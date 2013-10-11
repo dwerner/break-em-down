@@ -6,5 +6,5 @@ ballbreaker/Assembly-CSharp-firstpass.pidb
 ballbreaker/Assembly-UnityScript-firstpass.pidb
 ballbreaker/Assembly-UnityScript-firstpass.unityproj
 ballbreaker/Assembly-UnityScript-firstpass-vs.unityproj
-ballbreaker/Assembly-CSharp.pidb
+*.pidb
 *.userprefs
