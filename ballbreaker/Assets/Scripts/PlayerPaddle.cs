@@ -49,7 +49,7 @@ public class PlayerPaddle : MonoBehaviour {
 			 */
 			if (Input.touches.Count() > 0) {
 				var delta = Input.touches[0].position;
-				rigidbody.position = new Vector3((delta.x -640f) / 80f, pos.y, pos.z);
+				rigidbody.position = new Vector3((delta.x -400f) / 80f, pos.y, pos.z);
 			}
 
 
