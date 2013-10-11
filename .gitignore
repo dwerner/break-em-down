@@ -20,3 +20,4 @@ ballbreaker/Assets/Scripts/PlayerPaddle.cs
 ballbreaker/ballbreaker-csharp.sln
 ballbreaker/ballbreaker.sln
 ballbreaker/ballbreaker.userprefs
+*.userprefs
