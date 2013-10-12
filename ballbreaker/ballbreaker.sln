@@ -14,6 +14,7 @@ Global
 		{CEC3163C-C883-302C-EFBE-178DA46D97F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC3163C-C883-302C-EFBE-178DA46D97F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -25,7 +26,6 @@ Global
 		$1.inheritsScope = text/plain
 		$1.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $2
-		$2.IndentSwitchBody = True
 		$2.NamespaceBraceStyle = EndOfLine
 		$2.ClassBraceStyle = EndOfLine
 		$2.InterfaceBraceStyle = EndOfLine
@@ -37,35 +37,16 @@ Global
 		$2.ElseNewLinePlacement = NewLine
 		$2.CatchNewLinePlacement = NewLine
 		$2.FinallyNewLinePlacement = NewLine
-		$2.EmbeddedStatementPlacement = SameLine
-		$2.WithinMethodDeclarationParentheses = True
-		$2.WithinConstructorDeclarationParentheses = True
-		$2.BeforeIndexerDeclarationBracket = False
-		$2.WithinIndexerDeclarationBracket = True
-		$2.WithinTypeOfParentheses = True
 		$2.inheritsSet = Mono
 		$2.inheritsScope = text/x-csharp
 		$2.scope = text/x-csharp
 		$0.TextStylePolicy = $3
 		$3.FileWidth = 120
-		$3.TabWidth = 3
+		$3.TabWidth = 4
 		$3.EolMarker = Unix
-		$3.inheritsSet = VisualStudio
+		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
-		$0.StandardHeader = $4
-		$4.Text = 
-		$4.IncludeInNewFiles = True
-		$0.VersionControlPolicy = $5
-		$5.inheritsSet = Mono
-		$0.ChangeLogPolicy = $6
-		$6.UpdateMode = None
-		$6.MessageStyle = $7
-		$7.LineAlign = 0
-		$6.inheritsSet = Mono
-		$0.DotNetNamingPolicy = $8
-		$8.DirectoryNamespaceAssociation = None
-		$8.ResourceNamePolicy = FileFormatDefault
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
