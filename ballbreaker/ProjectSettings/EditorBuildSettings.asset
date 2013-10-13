@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/test stars.unity
   - enabled: 1
     path: Assets/Scenes/tribal.unity
+  - enabled: 1
+    path: Assets/Scenes/rainbow.unity
+  - enabled: 1
+    path: Assets/Scenes/coffee.unity
