@@ -37,7 +37,7 @@ public class GameBall : MonoBehaviour {
    }
 
    void OnCollisionEnter(Collision col) {
-      Debug.Log("Collided witdddh " + col.gameObject.name);
+      Debug.Log("Collided with " + col.gameObject.name);
       score.increaseBy(10);
    }
 }
