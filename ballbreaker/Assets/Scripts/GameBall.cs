@@ -76,6 +76,7 @@ public class GameBall : MonoBehaviour {
       yield return null;
    }
 
+
    void OnCollisionEnter(Collision col) {
       Debug.Log("Collided with " + col.gameObject.name);
 
