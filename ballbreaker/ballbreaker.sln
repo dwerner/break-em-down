@@ -45,6 +45,7 @@ Global
 		$2.NewParentheses = False
 		$2.SpacesBeforeBrackets = False
 		$2.BlankLinesBeforeFirstDeclaration = 1
+		$2.BlankLinesBetweenTypes = 0
 		$2.BlankLinesBetweenFields = 1
 		$2.BlankLinesBetweenEventFields = 1
 		$2.inheritsSet = Mono
