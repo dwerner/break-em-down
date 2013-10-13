@@ -3,20 +3,21 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 
-   public static int score = 0;
+   public int score = 0;
 
    void Start() {
-      this.setScore (0);
+      this.score = 0;
    }
 
-   // Update is called once per frame
-   void Update () {
-      this.setScore (score);
+   void Update() {
+      this.updateGUI();
    }
 
-   void setScore(int score) {
+   void updateGUI() {
+      this.guiText.text = "Score: " + score;
+   }
 
-      this.guiText.text = "Scoreee: " + score;
-
+   public void increaseBy(int amount) {
+      this.score += amount;
    }
 }

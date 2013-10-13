@@ -7,21 +7,25 @@ public class Balls : MonoBehaviour {
    public int curLives;
 
    // Use this for initialization
-   void Start () {
+   void Start() {
       curLives = this.defaultLives;
    }
 
    // Update is called once per frame
-   void Update () {
+   void Update() {
 
       if (this.curLives == 0) {
-         Application.LoadLevel ("MainMenu");
+         Application.LoadLevel("MainMenu");
       }
 
-      this.updateGUI ();
+      this.updateGUI();
    }
 
    void updateGUI() {
       this.guiText.text = "Balls: " + this.curLives.ToString();
+   }
+
+   public void decrease(int amount) {
+      this.curLives -= amount;
    }
 }

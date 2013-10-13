@@ -3,8 +3,12 @@ using System.Collections;
 
 public class OutOfBounds : MonoBehaviour {
 
+   public Balls balls;
+
    void OnCollisionEnter (Collision c) {
 
-     Application.LoadLevel ("MainMenu");
+      if (balls != null) balls.decrease(1);
+
+
    }
 }
