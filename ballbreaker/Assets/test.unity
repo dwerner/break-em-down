@@ -803,7 +803,7 @@ Transform:
   m_LocalPosition: {x: 1.48000002, y: -.405000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1848623434}
+  m_Father: {fileID: 1606104696}
 --- !u!114 &286500418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,7 +1816,7 @@ Transform:
   m_LocalPosition: {x: .620000005, y: -.405000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1848623434}
+  m_Father: {fileID: 1606104696}
 --- !u!132 &660439765
 GUIText:
   m_ObjectHideFlags: 0
@@ -3764,6 +3764,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &1352557351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1352557352}
+  m_Layer: 0
+  m_Name: Game Over
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352557352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352557351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1689504561}
 --- !u!1001 &1370842848
 Prefab:
   m_ObjectHideFlags: 0
@@ -4291,6 +4317,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f7bf9ca3da20c174cbef20e42da38374, type: 2}
+    - target: {fileID: 100000, guid: 57048a79d5f838547a66429c8ea8c108, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57048a79d5f838547a66429c8ea8c108, type: 2}
   m_RootGameObject: {fileID: 980836268}
@@ -4830,6 +4860,34 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &1606104695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1606104696}
+  m_Layer: 0
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606104696
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1606104695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 286500417}
+  - {fileID: 660439764}
+  m_Father: {fileID: 0}
 --- !u!1001 &1616790568
 Prefab:
   m_ObjectHideFlags: 0
@@ -4958,6 +5016,33 @@ Prefab:
   m_RootGameObject: {fileID: 675620982}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1689504560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1689504561}
+  m_Layer: 0
+  m_Name: Screens
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689504561
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689504560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1352557352}
+  m_Father: {fileID: 1848623434}
 --- !u!1001 &1708612185
 Prefab:
   m_ObjectHideFlags: 0
@@ -5627,11 +5712,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848623433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.552508593, y: 1.38132286, z: -2.62368011}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 660439764}
-  - {fileID: 286500417}
+  - {fileID: 1689504561}
   m_Father: {fileID: 0}
 --- !u!1001 &1849620152
 Prefab:
@@ -5877,48 +5961,48 @@ Transform:
   m_LocalPosition: {x: 1.5415802, y: 1.3817749, z: -2.59472656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3615381}
-  - {fileID: 1119403666}
-  - {fileID: 1147460097}
-  - {fileID: 1203913154}
-  - {fileID: 1256719735}
-  - {fileID: 1768360280}
-  - {fileID: 1792654435}
-  - {fileID: 1805389037}
-  - {fileID: 1812866687}
-  - {fileID: 1844932753}
-  - {fileID: 1927476395}
-  - {fileID: 2009016012}
-  - {fileID: 2074913224}
   - {fileID: 2090147485}
   - {fileID: 534697010}
-  - {fileID: 568068095}
-  - {fileID: 1383264956}
-  - {fileID: 1384013941}
-  - {fileID: 1432171250}
-  - {fileID: 1455784329}
-  - {fileID: 1499686841}
-  - {fileID: 1518103088}
+  - {fileID: 1844932753}
   - {fileID: 326624776}
-  - {fileID: 1014810706}
   - {fileID: 1065134273}
-  - {fileID: 1088096962}
-  - {fileID: 1093334141}
-  - {fileID: 855874199}
+  - {fileID: 1383264956}
   - {fileID: 873204126}
-  - {fileID: 928016196}
-  - {fileID: 397332140}
-  - {fileID: 421562484}
-  - {fileID: 346024933}
-  - {fileID: 353920930}
-  - {fileID: 124292850}
-  - {fileID: 97396773}
-  - {fileID: 671191127}
-  - {fileID: 675620987}
-  - {fileID: 730019842}
   - {fileID: 732854382}
+  - {fileID: 1147460097}
+  - {fileID: 1203913154}
+  - {fileID: 1119403666}
+  - {fileID: 855874199}
+  - {fileID: 3615381}
+  - {fileID: 1432171250}
+  - {fileID: 671191127}
+  - {fileID: 1455784329}
+  - {fileID: 928016196}
+  - {fileID: 2009016012}
+  - {fileID: 1518103088}
+  - {fileID: 346024933}
   - {fileID: 735198558}
+  - {fileID: 1256719735}
+  - {fileID: 1768360280}
+  - {fileID: 2074913224}
+  - {fileID: 124292850}
+  - {fileID: 1927476395}
+  - {fileID: 397332140}
+  - {fileID: 1812866687}
+  - {fileID: 1384013941}
+  - {fileID: 675620987}
+  - {fileID: 1014810706}
+  - {fileID: 730019842}
+  - {fileID: 1499686841}
+  - {fileID: 353920930}
+  - {fileID: 1088096962}
+  - {fileID: 97396773}
+  - {fileID: 421562484}
+  - {fileID: 1093334141}
+  - {fileID: 1792654435}
+  - {fileID: 568068095}
   - {fileID: 111568494}
+  - {fileID: 1805389037}
   m_Father: {fileID: 0}
 --- !u!1001 &1968826625
 Prefab:

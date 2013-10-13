@@ -22,10 +22,10 @@ public class Balls : MonoBehaviour {
    }
 
    void updateGUI() {
-      this.guiText.text = "Balls: " + this.curLives.ToString();
+      this.GetComponent<TextMesh>().text = "Balls: " + this.curLives.ToString();
    }
 
-   public void decrease(int amount) {
+   public void decreaseBy(int amount) {
       this.curLives -= amount;
    }
 }

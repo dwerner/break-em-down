@@ -6,9 +6,6 @@ public class OutOfBounds : MonoBehaviour {
    public Balls balls;
 
    void OnCollisionEnter (Collision c) {
-
-      if (balls != null) balls.decrease(1);
-
-
+      if (balls != null) balls.decreaseBy(1);
    }
 }

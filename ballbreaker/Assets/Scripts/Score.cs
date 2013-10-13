@@ -14,7 +14,7 @@ public class Score : MonoBehaviour {
    }
 
    void updateGUI() {
-      this.guiText.text = "Score: " + score;
+      this.GetComponent<TextMesh>().text = "Score: " + score;
    }
 
    public void increaseBy(int amount) {
