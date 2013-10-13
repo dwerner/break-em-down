@@ -392,7 +392,8 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8281c67a0b0f17741bdb9c10c276bfe4, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 5187d674d17bbb649be69c549424069a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5187d674d17bbb649be69c549424069a, type: 2}
   m_RootGameObject: {fileID: 974999460}
   m_IsPrefabParent: 0
@@ -602,7 +603,7 @@ Transform:
   m_GameObject: {fileID: 451879132}
   m_LocalRotation: {x: -.707106888, y: 0, z: 0, w: .707106769}
   m_LocalPosition: {x: .351308644, y: -5.24963379, z: .601178169}
-  m_LocalScale: {x: 12.367939, y: 73.6782913, z: 24.2764225}
+  m_LocalScale: {x: 15.769125, y: 73.6782913, z: 24.2764225}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!64 &451879136
@@ -1248,8 +1249,8 @@ GameObject:
   - 135: {fileID: 974999464}
   - 23: {fileID: 974999463}
   - 54: {fileID: 974999462}
-  - 114: {fileID: 974999461}
   - 82: {fileID: 974999467}
+  - 114: {fileID: 974999461}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1260,18 +1261,18 @@ GameObject:
 --- !u!114 &974999461
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5187d674d17bbb649be69c549424069a,
-    type: 2}
-  m_PrefabInternal: {fileID: 350434502}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974999460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d77ceb7f5f04f188952b3a5d733c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumSpeed: 5
-  maxSpeed: 25
-  speed: 0
+  minSpeed: 10
+  maxSpeed: 20
+  curSpeed: 10
+  score: {fileID: 0}
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
 --- !u!54 &974999462
 Rigidbody:

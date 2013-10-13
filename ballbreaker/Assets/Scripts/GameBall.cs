@@ -21,10 +21,10 @@ public class GameBall : MonoBehaviour {
       this.curSpeed = Vector3.Magnitude(rigidbody.velocity);
 		
       if (this.curSpeed > this.maxSpeed) {
-         rigidbody.velocity = (rigidbody.velocity) / (this.curSpeed / this.maxSpeed);
+         rigidbody.velocity /= this.curSpeed / this.maxSpeed;
       }
-      else if (this.curSpeed < this.minSpeed) {
-         rigidbody.velocity = (rigidbody.velocity) / (this.curSpeed / this.minSpeed);
+      else if (this.curSpeed < this.minSpeed && this.curSpeed != 0) {
+         rigidbody.velocity /= this.curSpeed / this.minSpeed;
       }
    }
 
