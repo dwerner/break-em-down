@@ -7,8 +7,9 @@ public class GameBall : MonoBehaviour {
    public float curSpeed = 10;
    public Score score;
 
+   public AudioClip collisionSound;
+
    void Start() {
-      Debug.Log("Test");
       rigidbody.AddRelativeForce(new Vector3(0, this.minSpeed, 0));
    }
 
@@ -25,6 +26,14 @@ public class GameBall : MonoBehaviour {
       else if (this.curSpeed < this.minSpeed) {
          rigidbody.velocity = (rigidbody.velocity) / (this.curSpeed / this.minSpeed);
       }
+   }
+
+   void OnCollisionExit (Collision c) {
+
+      if (this.collisionSound != null){
+         audio.PlayOneShot(this.collisionSound);
+      }
+
    }
 
    void OnCollisionEnter(Collision col) {
