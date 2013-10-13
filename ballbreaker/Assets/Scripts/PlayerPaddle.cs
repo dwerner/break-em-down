@@ -4,14 +4,12 @@ using System.Collections.Generic;
 using System.Collections;
 
 public class PlayerPaddle : MonoBehaviour {
+
    public float speed = 20;
-
    public float leftLimit = -7.5f;
-
    public float rightLimit = 7.5f;
 
    public bool touchesExist;
-
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
       yield return StartCoroutine(this.GameLoop());
