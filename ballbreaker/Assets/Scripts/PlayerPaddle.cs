@@ -21,7 +21,7 @@ public class PlayerPaddle : MonoBehaviour {
          var h = Input.GetAxis("Horizontal");
 
          if (h != 0) {
-            var move = h * Time.deltaTime * speed; // dan's comment
+            var move = h * Time.deltaTime * speed; // poop
 
             /* 
              * For the paddle, perhaps it does make more sense to control via position, and limit based on a static width.
