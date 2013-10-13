@@ -126,8 +126,8 @@ GameObject:
   - 135: {fileID: 125332360}
   - 23: {fileID: 125332359}
   - 54: {fileID: 125332358}
-  - 114: {fileID: 125332357}
   - 82: {fileID: 125332356}
+  - 114: {fileID: 125332357}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -197,19 +197,21 @@ AudioSource:
 --- !u!114 &125332357
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5187d674d17bbb649be69c549424069a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1174334709}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 125332355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d77ceb7f5f04f188952b3a5d733c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumSpeed: 5
-  maxSpeed: 25
-  speed: 0
-  collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
+  minSpeed: 10
+  maxSpeed: 20
+  curSpeed: 10
+  score: {fileID: 0}
+  pulseOnImpact: 0
+  pulseAmount: 1.39999998
+  collisionSound: {fileID: 0}
 --- !u!54 &125332358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -781,7 +783,8 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8281c67a0b0f17741bdb9c10c276bfe4, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 5187d674d17bbb649be69c549424069a, type: 2}
   m_RootGameObject: {fileID: 974999460}
   m_IsPrefabParent: 0
@@ -1005,7 +1008,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09d5b0f004707844fa16a1f8c0f4188f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.08100414
+      value: -2.10940409
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09d5b0f004707844fa16a1f8c0f4188f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2290,8 +2293,8 @@ GameObject:
   - 135: {fileID: 974999464}
   - 23: {fileID: 974999463}
   - 54: {fileID: 974999462}
-  - 114: {fileID: 974999461}
   - 82: {fileID: 974999467}
+  - 114: {fileID: 974999461}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2302,19 +2305,21 @@ GameObject:
 --- !u!114 &974999461
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5187d674d17bbb649be69c549424069a,
-    type: 2}
-  m_PrefabInternal: {fileID: 350434502}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974999460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d77ceb7f5f04f188952b3a5d733c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumSpeed: 5
-  maxSpeed: 25
-  speed: 0
-  collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
+  minSpeed: 10
+  maxSpeed: 20
+  curSpeed: 10
+  score: {fileID: 0}
+  pulseOnImpact: 0
+  pulseAmount: 1.5
+  collisionSound: {fileID: 0}
 --- !u!54 &974999462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2853,7 +2858,7 @@ GameObject:
   - 23: {fileID: 1126551293}
   - 54: {fileID: 1126551292}
   m_Layer: 0
-  m_Name: WallTop 1
+  m_Name: WallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3009,7 +3014,8 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6d87c573209e00d47b8c21a480b31480, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 5187d674d17bbb649be69c549424069a, type: 2}
   m_RootGameObject: {fileID: 125332355}
   m_IsPrefabParent: 0
@@ -3280,7 +3286,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1340149712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.51079416, y: -1.08099353, z: 0}
+  m_LocalPosition: {x: -3.54507375, y: -2.12653351, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1.90580428}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3345,6 +3351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476306341744ea746b72c8d480272ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balls: {fileID: 0}
 --- !u!65 &1373343047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3371,7 +3378,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373343044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .414512902, y: -6.98445797, z: 0}
+  m_LocalPosition: {x: .344262779, y: -7.96796751, z: 0}
   m_LocalScale: {x: 6.64916086, y: .762500226, z: .603660643}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3386,6 +3393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476306341744ea746b72c8d480272ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balls: {fileID: 0}
 --- !u!1001 &1413571066
 Prefab:
   m_ObjectHideFlags: 0
@@ -4415,7 +4423,7 @@ Transform:
   m_PrefabInternal: {fileID: 402947827}
   m_GameObject: {fileID: 2110762614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.27073431, y: -1.08100414, z: -.0241653621}
+  m_LocalPosition: {x: 4.27073431, y: -2.10940409, z: -.0241653621}
   m_LocalScale: {x: 1, y: 12, z: 1.90580428}
   m_Children: []
   m_Father: {fileID: 0}
