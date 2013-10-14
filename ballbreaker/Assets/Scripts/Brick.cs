@@ -15,6 +15,7 @@ public class Brick : MonoBehaviour {
 		};
 
 		var initialScale = transform.localScale;
+
 		foreach (var i in sizes){
 			transform.localScale = initialScale * i;
 			yield return 0;

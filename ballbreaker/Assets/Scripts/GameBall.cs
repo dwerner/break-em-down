@@ -55,10 +55,14 @@ public class GameBall : MonoBehaviour {
       this.curSpeed = Vector3.Magnitude(rigidbody.velocity);
 		
       if (this.curSpeed > this.maxSpeed) {
+
          rigidbody.velocity /= this.curSpeed / this.maxSpeed;
+
       }
       else if (this.curSpeed < this.minSpeed && this.curSpeed != 0) {
+
          rigidbody.velocity /= this.curSpeed / this.minSpeed;
+
       }
    }
 
@@ -78,17 +82,29 @@ public class GameBall : MonoBehaviour {
 
 
    void OnCollisionEnter(Collision col) {
+
       Debug.Log("Collided with " + col.gameObject.name);
 
+      #region collision_logic // what do we do when we collide with x
+
       if (col.gameObject.GetComponent<OutOfBounds>() != null) {
+
          Debug.Log("ball lost");
          this.gameObject.SetActive(false); // no longer active if we are out of bounds
          return;
+
       }
 
-      if (this.score != null) {
-         score.increaseBy(10);
+      if (col.gameObject.GetComponent<Brick>() != null){
+
+         if (this.score != null) {
+
+            score.increaseBy(10);
+         
+         }
       }
+
+      #endregion
    }
 
 
