@@ -4,6 +4,8 @@ using System.Collections;
 
 public class LevelController : MonoBehaviour {
 
+   public GameObject ballPrefab;
+
    public event BallOutOfBoundsEventHandler BallOutOfBounds;
    public delegate void BallOutOfBoundsEventHandler(object sender);
 
@@ -38,8 +40,7 @@ public class LevelController : MonoBehaviour {
 
       }
 
-      var ball = Resources.Load("Prefabs/Ball");
-      Instantiate(ball);
+      Instantiate(this.ballPrefab);
    }
 
    public void RaiseBrickDestroyed(){

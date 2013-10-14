@@ -15,7 +15,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,6 @@ MonoBehaviour:
   minSpeed: 10
   maxSpeed: 20
   curSpeed: 10
-  score: {fileID: 0}
   pulseOnImpact: 1
   pulseAmount: 1.39999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
