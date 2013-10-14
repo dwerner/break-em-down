@@ -47,7 +47,7 @@
      <Compile Include="Assets\Scripts\Balls.cs" />
      <Compile Include="Assets\Scripts\Brick.cs" />
      <Compile Include="Assets\Scripts\GameBall.cs" />
-     <Compile Include="Assets\Scripts\LevelControler.cs" />
+     <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\MainMenu\NewGameScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu\QuitScript.cs" />

@@ -12,6 +12,8 @@ public class GameBall : MonoBehaviour {
    public float pulseAmount = 1.4f;
    public AudioClip collisionSound;
 
+   public LevelController levelController;
+
    private float[] pulseFrames;
    private bool isPulsing = false; //concurrent lock (possible/atomic because concurrency is done via co-routines)
 
@@ -85,6 +87,7 @@ public class GameBall : MonoBehaviour {
 
       Debug.Log("Collided with " + col.gameObject.name);
 
+ 
       #region collision_logic // what do we do when we collide with x
 
       if (col.gameObject.GetComponent<OutOfBounds>() != null) {
