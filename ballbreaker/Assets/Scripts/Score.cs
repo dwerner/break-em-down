@@ -4,9 +4,13 @@ using System.Collections;
 public class Score : MonoBehaviour {
 
    public int score = 0;
+   public LevelController levelController;
 
    void Start() {
       this.score = 0;
+      if (this.levelController) {
+         this.levelController.BrickDestroyed += (object sender) => this.increaseBy(10);
+      }
    }
 
    void Update() {

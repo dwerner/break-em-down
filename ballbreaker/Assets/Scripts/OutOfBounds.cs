@@ -3,9 +3,11 @@ using System.Collections;
 
 public class OutOfBounds : MonoBehaviour {
 
-   public Balls balls;
+   public LevelController levelController;
 
    void OnCollisionEnter (Collision c) {
-      if (balls != null) balls.decreaseBy(1);
+      c.gameObject.SetActive(false); // no longer active if we are out of bounds
+
+      levelController.RaiseBallOutOfBounds();
    }
 }

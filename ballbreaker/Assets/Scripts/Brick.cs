@@ -5,19 +5,24 @@ using System.Collections.Generic;
 public class Brick : MonoBehaviour {
 
 	public int hitPoints =1;
+   public LevelController levelController;
+
 
 	IEnumerator OnCollisionEnter (Collision c){
 
 		hitPoints -= 1;
 
-      yield return StartCoroutine(this.Pulse());
-
 		if (hitPoints <= 0) {
+
+         yield return StartCoroutine(this.Pulse());
+
 			this.gameObject.SetActive(false);
 
+         if (levelController != null) {
+           levelController.RaiseBrickDestroyed();
+         }
 		}
 
-		yield return null;
 	}
 
    IEnumerator Pulse(){

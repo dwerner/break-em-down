@@ -7,7 +7,7 @@ public class GameBall : MonoBehaviour {
    public float minSpeed = 10;
    public float maxSpeed = 20;
    public float curSpeed = 10;
-   public Score score;
+
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
    public AudioClip collisionSound;
@@ -87,27 +87,6 @@ public class GameBall : MonoBehaviour {
 
       Debug.Log("Collided with " + col.gameObject.name);
 
- 
-      #region collision_logic // what do we do when we collide with x
-
-      if (col.gameObject.GetComponent<OutOfBounds>() != null) {
-
-         Debug.Log("ball lost");
-         this.gameObject.SetActive(false); // no longer active if we are out of bounds
-         return;
-
-      }
-
-      if (col.gameObject.GetComponent<Brick>() != null){
-
-         if (this.score != null) {
-
-            score.increaseBy(10);
-         
-         }
-      }
-
-      #endregion
    }
 
 
