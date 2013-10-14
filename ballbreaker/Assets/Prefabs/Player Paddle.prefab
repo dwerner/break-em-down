@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
-  - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
+  - 64: {fileID: 6400000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Player Paddle
   m_TagString: Untagged
@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .11580056, y: -3.50588083, z: 0}
-  m_LocalScale: {x: 2.25542831, y: .223327905, z: 2.1591928}
+  m_LocalRotation: {x: -.707106888, y: 0, z: 0, w: .707106769}
+  m_LocalPosition: {x: .351308644, y: -5.24963379, z: .601178169}
+  m_LocalScale: {x: 15.769125, y: 73.6782913, z: 24.2764225}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 80a369c97ec506b449cadc1737b183d5, type: 2}
+  - {fileID: 2100000, guid: 8281c67a0b0f17741bdb9c10c276bfe4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -55,7 +55,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: f1a540ca6c82e27409fee66d75650e08, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -63,26 +63,27 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 124
-  m_CollisionDetection: 2
---- !u!65 &6500000
-BoxCollider:
+  m_CollisionDetection: 0
+--- !u!64 &6400000
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 13400000, guid: a4a543bf1709144ff9130ac793d34ab6, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: f1a540ca6c82e27409fee66d75650e08, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  leftLimit: -6
-  rightLimit: 6
+  leftLimit: -7.5
+  rightLimit: 7.5
   touchesExist: 0
 --- !u!1001 &100100000
 Prefab:

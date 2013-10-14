@@ -44,15 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Balls.cs" />
      <Compile Include="Assets\Scripts\Brick.cs" />
      <Compile Include="Assets\Scripts\GameBall.cs" />
-     <Compile Include="Assets\Scripts\MainMenuButton.cs" />
-     <Compile Include="Assets\Scripts\MenuBall.cs" />
-     <Compile Include="Assets\Scripts\NewGameScript.cs" />
+     <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MainMenuButton.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\NewGameScript.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\QuitScript.cs" />
      <Compile Include="Assets\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Scripts\PlayerPaddle.cs" />
-     <Compile Include="Assets\Scripts\QuitScript.cs" />
-     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\Utilities\ExtensionMethods.cs" />
+     <Compile Include="Assets\Scripts\Utilities\GameController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
