@@ -8,3 +8,4 @@ ballbreaker/Assembly-UnityScript-firstpass.unityproj
 ballbreaker/Assembly-UnityScript-firstpass-vs.unityproj
 *.pidb
 *.userprefs
+/.project
