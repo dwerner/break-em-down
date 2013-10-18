@@ -4,10 +4,6 @@ using System.Collections.Generic;
 
 public class GameBall : MonoBehaviour {
 
-   public float speed = 0.1f;
-   private Vector3 direction;
-
-   public float bounceVariance = 1.0f;
 
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
@@ -24,12 +20,12 @@ public class GameBall : MonoBehaviour {
    }
 
    void Start() {
-      this.direction = new Vector3(1.0f, 1.0f).normalized;
+
+      rigidbody.AddRelativeForce(new Vector3(150.0f, 150.0f));
    }
 
    void FixedUpdate() {
-      this.direction = this.direction.normalized;
-      this.rigidbody.velocity = direction * speed;
+
    }
 
 
@@ -57,36 +53,43 @@ public class GameBall : MonoBehaviour {
    }
   
 
-   IEnumerator OnCollisionExit (Collision c) {
+   void OnCollisionExit (Collision c) {
+
+      Debug.Log("Exit");
 
       if (this.collisionSound != null){
          audio.PlayOneShot(this.collisionSound);
       }
 
-
+      Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.black, 2, false);
+      Debug.DrawRay(c.contacts[0].point, this.rigidbody.velocity, Color.green, 2, false);
 
 
       if (this.pulseOnImpact) {
-         yield return StartCoroutine(this.Pulse());
+         //yield return StartCoroutine(this.Pulse());
       }
 
-      yield return null;
+      //yield return null;
    }
 
 
-   void OnCollisionEnter(Collision col) {
-
+   void OnCollisionEnter(Collision c) {
+  /*    Debug.Log("Collided with " + c.gameObject.name);
+         
       var seed = (this.bounceVariance * Random.value)/2; //introduce a little randomness into the angles of reflection
 
-      Debug.Log("Collided with " + col.gameObject.name);
+      var contact = c.contacts[0];
 
-      var contact = col.contacts[0];
-      Debug.DrawRay(contact.point, contact.normal, Color.green, 2, false);
-      Debug.DrawRay(contact.point, direction, Color.red, 2, false);
+      Debug.DrawRay(contact.point, this.rigidbody.velocity, Color.red, 2, false);
+      /*
+      var reflected = Vector3.Reflect(this.rigidbody.velocity, contact.normal);
+      //this.direction = new Vector3(reflected.x + (seed-(seed/2)), reflected.y+(seed-(seed/2))).normalized;
+      this.rigidbody.velocity = reflected;
 
-      var reflected = Vector3.Reflect(this.direction, contact.normal);
-      this.direction = new Vector3(reflected.x + (seed-(seed/2)), reflected.y+(seed-(seed/2)));
+      Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.blue, 2, false);
+
       Debug.Log("reflected ball");
+      */
    }
 
 

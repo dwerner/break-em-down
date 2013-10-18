@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\MainMenu\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\MainMenu\NewGameScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu\QuitScript.cs" />
+     <Compile Include="Assets\Scripts\ObjectBehaviours\MouseButton.cs" />
+     <Compile Include="Assets\Scripts\ObjectBehaviours\TouchButton.cs" />
      <Compile Include="Assets\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Scripts\PlayerPaddle.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />

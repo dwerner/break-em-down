@@ -4,9 +4,14 @@ using System.Collections.Generic;
 
 public class Brick : MonoBehaviour {
 
-	public int hitPoints =1;
+   public int hitPoints =1;
    public LevelController levelController;
 
+   void Start(){
+      if (levelController != null) {
+         levelController.brickCount += 1;
+      }
+   }
 
 	IEnumerator OnCollisionEnter (Collision c){
 

@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.537714005, y: .159432113, z: -.188237369}
+  m_LocalPosition: {x: -2.18154573, y: -.0312942266, z: -.188237369}
   m_LocalScale: {x: .472684324, y: .472684324, z: .472684324}
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,7 +149,7 @@ TrailRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_Time: 1
+  m_Time: .200000003
   m_StartWidth: .5
   m_EndWidth: .00999999978
   m_Colors:
@@ -181,8 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  bounceVariance: 1
   pulseOnImpact: 0
   pulseAmount: 1.20000005
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
@@ -197,7 +195,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .600000024
+  m_Radius: .5
   m_Center: {x: 5.96046412e-08, y: 0, z: -8.19563795e-08}
 --- !u!1001 &100100000
 Prefab:

@@ -16,7 +16,7 @@ public class PlayerPaddle : MonoBehaviour {
    }
 
    IEnumerator GameLoop() {
-      Vector3 pos = rigidbody.position;
+      Vector3 pos = transform.position;
       while (true) {
          var h = Input.GetAxis("Horizontal");
 
@@ -32,15 +32,12 @@ public class PlayerPaddle : MonoBehaviour {
              * *Note that changing the masses of the targets did have an effect on the kinds of intersections that were allowed before the object rebounds.
              */
             if (Mathf.Abs(h) > 0) {
-               if (!(this.rigidbody.position.x + move < this.leftLimit) &&
-                   !(this.rigidbody.position.x + move > this.rightLimit)) { 
+               if (!(this.transform.position.x + move < this.leftLimit) &&
+                   !(this.transform.position.x + move > this.rightLimit)) { 
 
-                  this.rigidbody.position += new Vector3(move, 0.0f, 0.0f);
-               }
+                  this.transform.position += new Vector3(move, 0.0f, 0.0f);
+               } 
             }
-         }
-         else {
-            this.rigidbody.velocity *= 0;
          }
 
 
