@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 public class GameBall : MonoBehaviour {
 
-   public float minSpeed = 10;
-   public float maxSpeed = 20;
-   public float curSpeed = 10;
+   public float speed = 0.1f;
+   private Vector3 direction;
+
+   public float bounceVariance = 1.0f;
 
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
@@ -17,15 +18,18 @@ public class GameBall : MonoBehaviour {
    private float[] pulseFrames;
    private bool isPulsing = false; //concurrent lock (possible/atomic because concurrency is done via co-routines)
 
-
    void Awake(){
       this.pulseFrames = this.buildPulseFrames();
 
    }
 
    void Start() {
-      rigidbody.AddRelativeForce(new Vector3(0, this.minSpeed, 0));
- 
+      this.direction = new Vector3(1.0f, 1.0f).normalized;
+   }
+
+   void FixedUpdate() {
+      this.direction = this.direction.normalized;
+      this.rigidbody.velocity = direction * speed;
    }
 
 
@@ -51,29 +55,16 @@ public class GameBall : MonoBehaviour {
       return frames.ToArray();
 
    }
-
-
-   void FixedUpdate() {
-      this.curSpeed = Vector3.Magnitude(rigidbody.velocity);
-		
-      if (this.curSpeed > this.maxSpeed) {
-
-         rigidbody.velocity /= this.curSpeed / this.maxSpeed;
-
-      }
-      else if (this.curSpeed < this.minSpeed && this.curSpeed != 0) {
-
-         rigidbody.velocity /= this.curSpeed / this.minSpeed;
-
-      }
-   }
-
+  
 
    IEnumerator OnCollisionExit (Collision c) {
 
       if (this.collisionSound != null){
          audio.PlayOneShot(this.collisionSound);
       }
+
+
+
 
       if (this.pulseOnImpact) {
          yield return StartCoroutine(this.Pulse());
@@ -85,8 +76,17 @@ public class GameBall : MonoBehaviour {
 
    void OnCollisionEnter(Collision col) {
 
+      var seed = (this.bounceVariance * Random.value)/2; //introduce a little randomness into the angles of reflection
+
       Debug.Log("Collided with " + col.gameObject.name);
 
+      var contact = col.contacts[0];
+      Debug.DrawRay(contact.point, contact.normal, Color.green, 2, false);
+      Debug.DrawRay(contact.point, direction, Color.red, 2, false);
+
+      var reflected = Vector3.Reflect(this.direction, contact.normal);
+      this.direction = new Vector3(reflected.x + (seed-(seed/2)), reflected.y+(seed-(seed/2)));
+      Debug.Log("reflected ball");
    }
 
 

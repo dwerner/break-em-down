@@ -9,11 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
-  - 135: {fileID: 13500000}
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400000}
+  - 135: {fileID: 13500000}
+  - 96: {fileID: 9600000}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.954294801, y: .159432113, z: -.000199645758}
+  m_LocalPosition: {x: -.537714005, y: .159432113, z: -.188237369}
   m_LocalScale: {x: .472684324, y: .472684324, z: .472684324}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +45,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8281c67a0b0f17741bdb9c10c276bfe4, type: 2}
+  - {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -64,13 +65,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: .5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 8
+  m_Interpolate: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!82 &8200000
 AudioSource:
@@ -130,6 +131,45 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!96 &9600000
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 5d943a71d297d4c02ae43db57520d735, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_Time: 1
+  m_StartWidth: .5
+  m_EndWidth: .00999999978
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4281743043
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4282729887
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4287401129
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4278255590
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 2227968
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,11 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 10
-  maxSpeed: 20
-  curSpeed: 10
+  speed: 10
+  bounceVariance: 1
   pulseOnImpact: 0
-  pulseAmount: 1.39999998
+  pulseAmount: 1.20000005
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
   levelController: {fileID: 0}
 --- !u!135 &13500000
@@ -158,8 +197,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: .600000024
+  m_Center: {x: 5.96046412e-08, y: 0, z: -8.19563795e-08}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
