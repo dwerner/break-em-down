@@ -55,7 +55,7 @@ public class PlayerPaddle : MonoBehaviour {
 
 
 
-            rigidbody.position = new Vector3((delta.x - 400f) / 80f, pos.y, pos.z);
+            transform.position = new Vector3((delta.x - 400f) / 80f, pos.y, pos.z);
          }
 
          yield return null;
