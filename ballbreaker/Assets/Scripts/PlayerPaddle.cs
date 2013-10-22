@@ -4,19 +4,62 @@ using System.Collections.Generic;
 using System.Collections;
 
 public class PlayerPaddle : MonoBehaviour {
-
    public float speed = 20;
+
    public float leftLimit = -7.5f;
+
    public float rightLimit = 7.5f;
 
    public bool touchesExist;
+
+   private TKPanRecognizer panner;
+   private TKRotationRecognizer rotater;
+
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
+
+      this.setupGestures();
+
       yield return StartCoroutine(this.GameLoop());
+   }
+
+   void setupGestures() {
+
+      this.panner = new TKPanRecognizer();
+      this.rotater = new TKRotationRecognizer();
+
+      // when using in conjunction with a pinch or rotation recognizer setting the min touches to 2 smoothes movement greatly
+      if (Application.platform == RuntimePlatform.IPhonePlayer)
+         this.panner.minimumNumberOfTouches = 2;
+
+      this.panner.gestureRecognizedEvent += this.movePaddle;
+      this.rotater.gestureRecognizedEvent += this.rotatePaddle;
+
+      TouchKit.addGestureRecognizer(this.panner);
+      TouchKit.addGestureRecognizer(this.rotater);
+
+   }
+
+   void movePaddle(TKPanRecognizer r){
+      transform.position += new Vector3(r.deltaTranslation.x, 0) / 50;
+   }
+
+   void rotatePaddle(TKRotationRecognizer r){
+      transform.Rotate(Vector3.up, r.deltaRotation);
+   }
+
+   void OnDestroy() {
+
+      this.panner.gestureRecognizedEvent -= this.movePaddle;
+      this.rotater.gestureRecognizedEvent -= this.rotatePaddle;
+
+      TouchKit.removeAllGestureRecognizers();
+
    }
 
    IEnumerator GameLoop() {
       Vector3 pos = transform.position;
+
       while (true) {
          var h = Input.GetAxis("Horizontal");
 
@@ -46,17 +89,15 @@ public class PlayerPaddle : MonoBehaviour {
           * So the paddle moves with an offset of 1/2 the x+y resolution.
           * 
           */
+         /*
          if (Input.touches.Count() > 0) {
             var delta = Input.touches[0].position;
-
-            var movingTouches = from x in Input.touches 
-                                where x.phase == TouchPhase.Moved
-                                select x; 
-
-
-
             transform.position = new Vector3((delta.x - 400f) / 80f, pos.y, pos.z);
          }
+         */
+
+
+
 
          yield return null;
       }

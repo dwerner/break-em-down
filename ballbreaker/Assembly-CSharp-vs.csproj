@@ -58,6 +58,9 @@
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Utilities\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Utilities\GameController.cs" />
+ <Reference Include="TouchKit">
+ <HintPath>Assets\Plugins\TouchKit.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
