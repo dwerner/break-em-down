@@ -53,9 +53,7 @@ public class GameBall : MonoBehaviour {
    }
   
 
-   void OnCollisionExit (Collision c) {
-
-      Debug.Log("Exit");
+   IEnumerator OnCollisionExit (Collision c) {
 
       if (this.collisionSound != null){
          audio.PlayOneShot(this.collisionSound);
@@ -66,30 +64,14 @@ public class GameBall : MonoBehaviour {
 
 
       if (this.pulseOnImpact) {
-         //yield return StartCoroutine(this.Pulse());
+         yield return StartCoroutine(this.Pulse());
       }
 
-      //yield return null;
+      yield return null;
    }
 
 
    void OnCollisionEnter(Collision c) {
-  /*    Debug.Log("Collided with " + c.gameObject.name);
-         
-      var seed = (this.bounceVariance * Random.value)/2; //introduce a little randomness into the angles of reflection
-
-      var contact = c.contacts[0];
-
-      Debug.DrawRay(contact.point, this.rigidbody.velocity, Color.red, 2, false);
-      /*
-      var reflected = Vector3.Reflect(this.rigidbody.velocity, contact.normal);
-      //this.direction = new Vector3(reflected.x + (seed-(seed/2)), reflected.y+(seed-(seed/2))).normalized;
-      this.rigidbody.velocity = reflected;
-
-      Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.blue, 2, false);
-
-      Debug.Log("reflected ball");
-      */
    }
 
 
