@@ -69,7 +69,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.Company.ProductName
+  iPhoneBundleIdentifier: com.pewpew.BallBreaker
   productGUID: 4b52321abba3d45bf895b123d110848b
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
