@@ -1590,7 +1590,7 @@ MonoBehaviour:
   pulseAmount: 1.14999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
   levelController: {fileID: 0}
-  speed: 300
+  speed: 150
 --- !u!82 &1125045220
 AudioSource:
   m_ObjectHideFlags: 0

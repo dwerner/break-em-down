@@ -13,22 +13,22 @@ public class Brick : MonoBehaviour {
       }
    }
 
-	IEnumerator OnCollisionEnter (Collision c){
+   IEnumerator OnCollisionEnter (Collision c){
 
-		hitPoints -= 1;
+      hitPoints -= 1;
 
-		if (hitPoints <= 0) {
+      if (hitPoints <= 0) {
 
          yield return StartCoroutine(this.Pulse());
 
-			this.gameObject.SetActive(false);
+         this.gameObject.SetActive(false);
 
          if (levelController != null) {
-           levelController.RaiseBrickDestroyed();
+            levelController.RaiseBrickDestroyed();
          }
-		}
+      }
 
-	}
+   }
 
    IEnumerator Pulse(){
       var sizes = new List<float>() {

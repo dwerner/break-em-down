@@ -76,7 +76,7 @@ public class PlayerPaddle : MonoBehaviour {
              */
             if (Mathf.Abs(h) > 0) {
                if (!(this.transform.position.x + move < this.leftLimit) &&
-                   !(this.transform.position.x + move > this.rightLimit)) { 
+                     !(this.transform.position.x + move > this.rightLimit)) { 
 
                   this.transform.position += new Vector3(move, 0.0f, 0.0f);
                } 
@@ -90,11 +90,11 @@ public class PlayerPaddle : MonoBehaviour {
           * 
           */
          /*
-         if (Input.touches.Count() > 0) {
+            if (Input.touches.Count() > 0) {
             var delta = Input.touches[0].position;
             transform.position = new Vector3((delta.x - 400f) / 80f, pos.y, pos.z);
-         }
-         */
+            }
+            */
 
 
 

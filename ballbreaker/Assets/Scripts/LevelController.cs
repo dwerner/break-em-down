@@ -19,10 +19,11 @@ public class LevelController : MonoBehaviour {
 
    public int brickCount;
 
-   private List<string> levels = new List<string>(){
-      "level1", 
-      "level2",
-   };
+   private List<string> levels =
+      new List<string>(){
+         "level1", 
+         "level2",
+      };
 
    private string currentLevel;
 
@@ -32,7 +33,7 @@ public class LevelController : MonoBehaviour {
    }
 
    public void RaiseGameOver() {
-      
+
       Debug.Log("-- game over --");
       Application.LoadLevel("MainMenu");
 
@@ -68,7 +69,7 @@ public class LevelController : MonoBehaviour {
 
    public void RaiseBallOutOfBounds() {
       BallOutOfBoundsEventHandler handler = BallOutOfBounds;
-      
+
       Debug.Log("ball lost");
 
       if (handler != null) {

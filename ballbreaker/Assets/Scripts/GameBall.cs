@@ -41,18 +41,18 @@ public class GameBall : MonoBehaviour {
 
       for (float i = 1.0f; i <= this.pulseAmount; i += 0.1f) {
          frames.Add(i);
-      
+
       }
 
       for (float i = this.pulseAmount; i >= 1.0f; i -= 0.1f) {
          frames.Add(i);
-      
+
       }
 
       return frames.ToArray();
 
    }
-  
+
 
    IEnumerator OnCollisionExit (Collision c) {
 
@@ -88,7 +88,7 @@ public class GameBall : MonoBehaviour {
          var originalLocalScale = this.transform.localScale;
 
          foreach (var f in this.pulseFrames) {
-      
+
             this.transform.localScale = originalLocalScale * f;
 
             yield return null;
