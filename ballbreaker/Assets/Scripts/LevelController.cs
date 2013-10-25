@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class LevelController : MonoBehaviour {
    public GameObject ballPrefab;
@@ -12,11 +14,21 @@ public class LevelController : MonoBehaviour {
    public delegate void BrickDestroyedEventHandler(object sender);
 
    public event EventHandler GameOver;
+
    public event EventHandler LevelWon;
 
    public int brickCount;
 
+   private List<string> levels = new List<string>(){
+      "level1", 
+      "level2",
+   };
+
+   private string currentLevel;
+
    void Start() {
+      this.currentLevel = Application.loadedLevelName;
+      Debug.Log(this.currentLevel);
    }
 
    public void RaiseGameOver() {
@@ -31,10 +43,20 @@ public class LevelController : MonoBehaviour {
 
    }
 
+   private string getNextLevel(){
+      int idx = levels.IndexOf(this.currentLevel);
+      if (idx+1 == levels.Count) {
+         return "MainMenu";
+      }
+      else {
+         return levels[idx + 1];
+      }
+   }
+
    public void RaiseLevelWon() {
 
       Debug.Log("-- level won --");
-      Application.LoadLevel("MainMenu");
+      Application.LoadLevel(this.getNextLevel());
 
       EventHandler handler = LevelWon;
       if (handler != null) {

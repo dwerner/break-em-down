@@ -344,9 +344,9 @@ GameObject:
   - 33: {fileID: 422207505}
   - 65: {fileID: 422207504}
   - 23: {fileID: 422207503}
-  - 114: {fileID: 422207502}
   - 54: {fileID: 422207501}
   - 114: {fileID: 422207500}
+  - 114: {fileID: 422207502}
   m_Layer: 0
   m_Name: coffee button
   m_TagString: Untagged
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cf2da4d859740858f3b0a74652fc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: plain
+  levelName: level1
 --- !u!23 &422207503
 Renderer:
   m_ObjectHideFlags: 0
@@ -1412,8 +1412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .100000001
-  bounceVariance: 1
   pulseOnImpact: 1
   pulseAmount: 1.20000005
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
@@ -1515,7 +1513,7 @@ GameObject:
   - 23: {fileID: 1558348998}
   - 102: {fileID: 1558348997}
   m_Layer: 0
-  m_Name: New Game Text
+  m_Name: level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1539,7 +1537,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1558348995}
-  m_Text: plain
+  m_Text: level1
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
