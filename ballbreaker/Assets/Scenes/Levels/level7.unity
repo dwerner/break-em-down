@@ -4975,7 +4975,7 @@ MonoBehaviour:
   pulseAmount: 1.14999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
   levelController: {fileID: 387582549}
-  speed: 150
+  speed: 200
 --- !u!82 &1125045220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8040,16 +8040,16 @@ Transform:
   - {fileID: 927718360}
   - {fileID: 201753571}
   - {fileID: 1943356427}
-  - {fileID: 1677167491}
+  - {fileID: 73394919}
+  - {fileID: 961202354}
+  - {fileID: 355682103}
+  - {fileID: 1711316835}
+  - {fileID: 2007645487}
   - {fileID: 2060651106}
   - {fileID: 890242756}
-  - {fileID: 1119423909}
-  - {fileID: 1711316835}
-  - {fileID: 961202354}
-  - {fileID: 2007645487}
+  - {fileID: 1677167491}
   - {fileID: 1888349363}
-  - {fileID: 73394919}
-  - {fileID: 355682103}
+  - {fileID: 1119423909}
   m_Father: {fileID: 1945474239}
 --- !u!1 &1754762787
 GameObject:

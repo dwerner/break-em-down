@@ -13,16 +13,26 @@ public class GameBall : MonoBehaviour {
 
    private float[] pulseFrames;
    private bool isPulsing = false; //concurrent lock (possible/atomic because concurrency is done via co-routines)
-   public float speed = 150f;
+   public float speed = 200f;
 
    void Awake(){
       this.pulseFrames = this.buildPulseFrames();
 
    }
 
-   void Start() {
+   IEnumerator Start() {
 
       rigidbody.AddRelativeForce(new Vector3(speed, speed));
+
+      var attainedSpeed = rigidbody.velocity;
+
+      while (true) {
+
+         if (this.transform.position.magnitude > 50.0f)
+            levelController.RaiseBallOutOfBounds();
+
+         yield return null;
+      }
    }
 
    void FixedUpdate() {
