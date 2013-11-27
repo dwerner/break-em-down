@@ -10,6 +10,7 @@ public class Balls : MonoBehaviour {
 
    // Use this for initialization
    void Start() {
+      this.levelController = LevelController.getInstance();
       curLives = this.defaultLives;
       if (this.levelController) {
          this.levelController.BallOutOfBounds += (object sender) => this.decreaseBy(1);

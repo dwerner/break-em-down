@@ -15,9 +15,11 @@ public class PlayerPaddle : MonoBehaviour {
    private TKPanRecognizer panner;
    private TKRotationRecognizer rotater;
 
+   public LevelController levelController;
+
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
-
+      this.levelController = LevelController.getInstance();
       this.setupGestures();
 
       yield return StartCoroutine(this.GameLoop());

@@ -24,8 +24,6 @@ public class GameBall : MonoBehaviour {
 
       rigidbody.AddRelativeForce(new Vector3(speed, speed));
 
-      var attainedSpeed = rigidbody.velocity;
-
       while (true) {
 
          if (this.transform.position.magnitude > 50.0f)

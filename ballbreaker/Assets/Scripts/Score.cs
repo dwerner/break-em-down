@@ -3,13 +3,19 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 
-   public int score = 0;
+   public static int score = 0;
    public LevelController levelController;
 
    void Start() {
-      this.score = 0;
+
+      this.levelController = LevelController.getInstance();
+
       if (this.levelController) {
          this.levelController.BrickDestroyed += (object sender) => this.increaseBy(10);
+
+         //only add the score to the total running if the level has been won
+         //this.levelController.LevelWon += (object sender, System.EventArgs e) => ;
+         this.levelController.LevelWon += (object sender, System.EventArgs e) => Debug.Log("TODO: send high score to server");
       }
    }
 
@@ -22,6 +28,6 @@ public class Score : MonoBehaviour {
    }
 
    public void increaseBy(int amount) {
-      this.score += amount;
+      score += amount;
    }
 }

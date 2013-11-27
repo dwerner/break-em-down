@@ -5,6 +5,10 @@ public class OutOfBounds : MonoBehaviour {
 
    public LevelController levelController;
 
+   public void Start(){
+      this.levelController = LevelController.getInstance();
+   }
+
    void OnCollisionEnter (Collision c) {
 
 	  if (c.gameObject.GetComponent<GameBall>() != null) {

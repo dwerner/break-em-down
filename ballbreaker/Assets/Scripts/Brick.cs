@@ -8,6 +8,7 @@ public class Brick : MonoBehaviour {
    public LevelController levelController;
 
    void Start(){
+      this.levelController = LevelController.getInstance();
       if (levelController != null) {
          levelController.brickCount += 1;
       }

@@ -19,25 +19,26 @@ public class LevelController : MonoBehaviour {
 
    public int brickCount;
 
+   private static LevelController instance;
+   public static LevelController getInstance(){
+      return instance;
+   }
+
    private List<string> levels =
       new List<string>(){
          "level1", 
          "level2",
-      "level3",
-      "level4",
-      "level5",
-      "level6",
-      "level7",
-      "level8",
-      "level9",
-      "level10",
-      "level11",
-      "level12",
+	      "level3",
+	      "level4",
+	      "level5",
+	      "level6",
+	      "level7"
       };
 
    private string currentLevel;
 
    void Start() {
+      LevelController.instance = this;
       this.currentLevel = Application.loadedLevelName;
       Debug.Log(this.currentLevel);
    }
