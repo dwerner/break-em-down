@@ -150,6 +150,12 @@
  <Reference Include="Assets\Plugins\TouchKit">
  <HintPath>Assets\Plugins\TouchKit.dll</HintPath>
  </Reference>
+ <Reference Include="Assets\TK2DROOT\tk2d\Editor\tk2dExternal">
+ <HintPath>Assets\TK2DROOT\tk2d\Editor\tk2dExternal.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\TK2DROOT\tk2d\Editor\tk2dSkin">
+ <HintPath>Assets\TK2DROOT\tk2d\Editor\tk2dSkin.dll</HintPath>
+ </Reference>
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -161,12 +167,6 @@
  </Reference>
  <Reference Include="\Applications\Unity\Unity.app\Contents\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions">
  <HintPath>\Applications\Unity\Unity.app\Contents\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Assets\TK2DROOT\tk2d\Editor\tk2dSkin">
- <HintPath>Assets\TK2DROOT\tk2d\Editor\tk2dSkin.dll</HintPath>
- </Reference>
- <Reference Include="Assets\TK2DROOT\tk2d\Editor\tk2dExternal">
- <HintPath>Assets\TK2DROOT\tk2d\Editor\tk2dExternal.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
