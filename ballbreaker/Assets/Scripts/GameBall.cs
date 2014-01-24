@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System; 
 
 public class GameBall : MonoBehaviour {
 
-
+  
+   public float angleThreshold = 10.0f;
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
    public AudioClip collisionSound;
@@ -22,7 +24,7 @@ public class GameBall : MonoBehaviour {
 
    IEnumerator Start() {
 
-      rigidbody.AddRelativeForce(new Vector3(speed, speed));
+      rigidbody.AddRelativeForce(new Vector3(speed*2,0));
 
       while (true) {
 
@@ -66,14 +68,32 @@ public class GameBall : MonoBehaviour {
 
       if (this.collisionSound != null){
          audio.PlayOneShot(this.collisionSound);
+
       }
 
       Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.black, 2, false);
       Debug.DrawRay(c.contacts[0].point, this.rigidbody.velocity, Color.green, 2, false);
+      
+      // x bump
+      if (Math.Abs(rigidbody.velocity.x) < angleThreshold){
+        rigidbody.AddRelativeForce(new Vector3(3 * (rigidbody.velocity.x>0?1:-1), 0));
+
+        Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.red, 2, false);
+
+      }
+
+      // y bump - prevent locking on a single axis
+      if (Math.Abs(rigidbody.velocity.y) < angleThreshold){
+        rigidbody.AddRelativeForce(new Vector3(0, 3 * (rigidbody.velocity.y>0?1:-1)));
+
+        Debug.DrawRay(rigidbody.position, rigidbody.velocity, Color.blue, 2, false);
+
+      }
 
 
       if (this.pulseOnImpact) {
          yield return StartCoroutine(this.Pulse());
+
       }
 
       yield return null;
