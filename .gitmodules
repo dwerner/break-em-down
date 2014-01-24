@@ -1,0 +1,3 @@
+[submodule "TouchKit"]
+	path = TouchKit
+	url = https://github.com/prime31/TouchKit
