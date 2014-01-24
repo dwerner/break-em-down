@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609486e07fe03e54cb0fc419e8db4c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   levelController: {fileID: 387582549}
 --- !u!102 &2654990
 TextMesh:
@@ -1749,6 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 100000, guid: e51925756ffac4611aabf776a488c39a, type: 2}
+  inGameMenu: {fileID: 0}
   brickCount: 0
 --- !u!4 &387582550
 Transform:
@@ -1766,7 +1766,6 @@ Transform:
   - {fileID: 543377761}
   - {fileID: 433502108}
   - {fileID: 1215925791}
-  - {fileID: 439203413}
   - {fileID: 1996206831}
   - {fileID: 737099043}
   - {fileID: 1883265924}
@@ -2093,10 +2092,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 439203412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35675037, y: 1.12779295, z: -.243896484}
+  m_LocalPosition: {x: -.425798059, y: 1.12779295, z: -.243896484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 387582550}
+  m_Father: {fileID: 0}
 --- !u!114 &439203414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,7 +2820,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 48d19aba37fff43289ba5360a9e7f3ea, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: .5448277, b: 1, a: 1}
 --- !u!4 &560846303
 Transform:
   m_ObjectHideFlags: 0
@@ -6129,6 +6128,7 @@ MonoBehaviour:
   leftLimit: -3
   rightLimit: 3
   touchesExist: 1
+  levelController: {fileID: 0}
 --- !u!1 &1248256784
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,45 +1,45 @@
 ﻿Shader "Petes/Solid Transparent Color" {
 
-	Properties {
-	    _Color ("Solid Color (A = Opacity)", Color) = (0,0,0,1) 
-	}
+ Properties {
+     _Color ("Solid Color (A = Opacity)", Color) = (0,0,0,1) 
+ }
 
-	Category {
+ Category {
 
-	    Tags {Queue = Transparent}
-	    ZWrite Off
-	    Blend SrcAlpha OneMinusSrcAlpha
+     Tags {Queue = Transparent}
+     ZWrite Off
+     Blend SrcAlpha OneMinusSrcAlpha
 
-	    SubShader {
-	        Pass {
-	            GLSLPROGRAM
-	            #ifdef VERTEX       
-	            void main() {
-	                gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-	            }
-	            #endif
+     SubShader {
+         Pass {
+             GLSLPROGRAM
+             #ifdef VERTEX       
+             void main() {
+                 gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+             }
+             #endif
 
-	            #ifdef FRAGMENT
-	            uniform vec4 _Color;
+             #ifdef FRAGMENT
+             uniform vec4 _Color;
 
-	            
+             
 
-	            void main() {
+             void main() {
 
-	                gl_FragColor = _Color;
+                 gl_FragColor = _Color;
 
-	            }
+             }
 
-	            #endif
-	            ENDGLSL
-	        }
+             #endif
+             ENDGLSL
+         }
 
-	    }
+     }
 
-	    SubShader {
-	        Color[_Color]
-	        Pass {}
-	    }
-	}
+     SubShader {
+         Color[_Color]
+         Pass {}
+     }
+ }
 
 }
