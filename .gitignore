@@ -9,4 +9,8 @@ ballbreaker/Assembly-UnityScript-firstpass-vs.unityproj
 *.pidb
 *.userprefs
 /.project
-/ballbreaker/Assets/Images/png/Thumbs.db
+ballbreaker/Assets/Images/png/Thumbs.db
+ballbreaker/*.csproj
+ballbreaker/*.sln
+ballbreaker/*.apk
+
