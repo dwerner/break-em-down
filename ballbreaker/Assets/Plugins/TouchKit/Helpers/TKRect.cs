@@ -30,7 +30,8 @@ public struct TKRect
 				this.height = height * multiplier;
 		}
 	
-		public TKRect copyWithExpansion (float allSidesExpansion) {
+		public TKRect copyWithExpansion (float allSidesExpansion)
+		{
 				allSidesExpansion *= TouchKit.instance.retinaMultiplier;
 				return copyWithExpansion (allSidesExpansion, allSidesExpansion);
 		}
