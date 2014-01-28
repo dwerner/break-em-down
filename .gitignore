@@ -13,4 +13,4 @@ ballbreaker/Assets/Images/png/Thumbs.db
 ballbreaker/*.csproj
 ballbreaker/Assembly*.sln
 ballbreaker/*.apk
-
+ballbreaker/Assets/test-results/*
