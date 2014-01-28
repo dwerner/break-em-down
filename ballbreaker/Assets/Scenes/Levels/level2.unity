@@ -353,8 +353,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 318026114}
   m_LocalRotation: {x: 0, y: 0, z: .307751209, w: .951466918}
-  m_LocalPosition: {x: 1.50638223, y: .234829903, z: .756103516}
-  m_LocalScale: {x: .603021741, y: .603021085, z: 1}
+  m_LocalPosition: {x: 1.46126151, y: .227455199, z: .756103516}
+  m_LocalScale: {x: .643915176, y: .64391458, z: 1}
   m_Children: []
   m_Father: {fileID: 462988379}
 --- !u!212 &318026116
@@ -856,7 +856,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 52804429}
-  - {fileID: 695263813}
   - {fileID: 2654988}
   m_Father: {fileID: 387582550}
 --- !u!1 &462988378
@@ -982,94 +981,6 @@ Transform:
   m_LocalScale: {x: 2.92268848, y: 2.92268848, z: 1.17000031}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!1 &695263812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100012, guid: 4b70aa3db561b2e419ef4ce7fb05736d, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 695263813}
-  - 23: {fileID: 695263816}
-  - 102: {fileID: 695263815}
-  - 114: {fileID: 695263814}
-  m_Layer: 0
-  m_Name: BallsDisplay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &695263813
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400012, guid: 4b70aa3db561b2e419ef4ce7fb05736d, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695263812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0146317482, y: 1.34544039, z: -.000199999995}
-  m_LocalScale: {x: 2.46679091, y: 2.46679091, z: 2.46679091}
-  m_Children: []
-  m_Father: {fileID: 462760312}
---- !u!114 &695263814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: 4b70aa3db561b2e419ef4ce7fb05736d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695263812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e247ca3b82b9a408e5d8a2fc3b8b58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultLives: 20
-  curLives: 0
-  levelController: {fileID: 387582549}
---- !u!102 &695263815
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 10200002, guid: 4b70aa3db561b2e419ef4ce7fb05736d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695263812}
-  m_Text: 'Balls: 0'
-  m_OffsetZ: 0
-  m_CharacterSize: .0399999991
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 55
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 332684264a80b4f299608b3f56836438, type: 3}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
---- !u!23 &695263816
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300006, guid: 4b70aa3db561b2e419ef4ce7fb05736d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695263812}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 332684264a80b4f299608b3f56836438, type: 3}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &696321644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1358,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997610100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0021795, y: -1.64815044, z: .5}
+  m_LocalPosition: {x: -1.0021795, y: -3.99538136, z: .5}
   m_LocalScale: {x: .525705576, y: .525705576, z: .525705576}
   m_Children:
   - {fileID: 1125045224}
@@ -1568,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angleThreshold: 5000
+  angleThreshold: 1
   pulseOnImpact: 0
   pulseAmount: 1.14999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}

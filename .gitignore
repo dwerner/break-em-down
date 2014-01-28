@@ -14,3 +14,4 @@ ballbreaker/*.csproj
 ballbreaker/Assembly*.sln
 ballbreaker/*.apk
 ballbreaker/Assets/test-results/*
+ballbreaker/Controllers/test-results/*
