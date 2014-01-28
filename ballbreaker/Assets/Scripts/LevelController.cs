@@ -17,6 +17,9 @@ public class LevelController : MonoBehaviour {
   public event EventHandler GameOver;
   public event EventHandler LevelWon;
 
+  public event StartPlayHandler StartPlay;
+  public delegate void StartPlayHandler(object sender);
+
   public int brickCount;
 
   private static LevelController instance;
@@ -112,6 +115,16 @@ public class LevelController : MonoBehaviour {
     }
 
     Instantiate(this.ballPrefab);
+  }
+
+  public void RaiseStartPlay() {
+    StartPlayHandler handler = StartPlay;
+    Debug.Log("play has begun!");
+    
+    if (handler != null) {
+      handler(this);
+    }
+
   }
 
   public void RaiseBrickDestroyed() {

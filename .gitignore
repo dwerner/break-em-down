@@ -11,6 +11,6 @@ ballbreaker/Assembly-UnityScript-firstpass-vs.unityproj
 /.project
 ballbreaker/Assets/Images/png/Thumbs.db
 ballbreaker/*.csproj
-ballbreaker/*.sln
+ballbreaker/Assembly*.sln
 ballbreaker/*.apk
 

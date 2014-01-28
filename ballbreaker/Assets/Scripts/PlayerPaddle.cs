@@ -14,6 +14,7 @@ public class PlayerPaddle : MonoBehaviour {
 
    private TKPanRecognizer panner;
    private TKRotationRecognizer rotater;
+   private TKTapRecognizer tapper;
 
    public LevelController levelController;
 
@@ -29,16 +30,22 @@ public class PlayerPaddle : MonoBehaviour {
 
       this.panner = new TKPanRecognizer();
       this.rotater = new TKRotationRecognizer();
+      this.tapper = new TKTapRecognizer();
 
       // when using in conjunction with a pinch or rotation recognizer setting the min touches to 2 smoothes movement greatly
-      if (Application.platform == RuntimePlatform.IPhonePlayer)
+      if (Application.platform == RuntimePlatform.IPhonePlayer){
          this.panner.minimumNumberOfTouches = 2;
+      }
 
       this.panner.gestureRecognizedEvent += this.movePaddle;
       this.rotater.gestureRecognizedEvent += this.rotatePaddle;
+      this.tapper.gestureRecognizedEvent += (obj) => {
+        this.levelController.RaiseStartPlay();
+      };
 
       TouchKit.addGestureRecognizer(this.panner);
       TouchKit.addGestureRecognizer(this.rotater);
+      TouchKit.addGestureRecognizer(this.tapper);
 
    }
 

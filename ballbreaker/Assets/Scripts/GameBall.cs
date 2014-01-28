@@ -23,13 +23,16 @@ public class GameBall : MonoBehaviour {
    }
 
    IEnumerator Start() {
-
-      rigidbody.AddRelativeForce(new Vector3(speed*2,0));
+ 
+      this.levelController.StartPlay += (object sender) => {
+        this.go();
+      };
 
       while (true) {
 
-         if (this.transform.position.magnitude > 50.0f)
+         if (this.transform.position.magnitude > 50.0f){
             levelController.RaiseBallOutOfBounds();
+         }
 
          yield return null;
       }
@@ -61,6 +64,12 @@ public class GameBall : MonoBehaviour {
 
       return frames.ToArray();
 
+   }
+
+   private void go(){
+      if (rigidbody.velocity.magnitude == 0){
+        rigidbody.AddRelativeForce( new Vector3(0, speed*2) );
+      }
    }
 
 
