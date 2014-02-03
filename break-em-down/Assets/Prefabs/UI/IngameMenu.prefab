@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14088a148d1a83e4780e3db13db5b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 9
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Checkbox
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: dc5e8cfc5fff846d7a573bb8f5960093, type: 2}
+    font: {fileID: 0}
     text: MUSIC
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 1
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14088a148d1a83e4780e3db13db5b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14088a148d1a83e4780e3db13db5b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Button
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1562,7 +1562,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: cb3bf0ad5e92744d6856da9a7d5a3125, type: 2}
+    font: {fileID: 0}
     text: RETRY
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Button
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: cb3bf0ad5e92744d6856da9a7d5a3125, type: 2}
+    font: {fileID: 0}
     text: NEXT...
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14088a148d1a83e4780e3db13db5b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: .40283978, g: 1, b: .323529422, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 0
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Button
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+    font: {fileID: 0}
     text: 'Current Level:'
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 1
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: cb3bf0ad5e92744d6856da9a7d5a3125, type: 2}
+    font: {fileID: 0}
     text: "MENU\x03"
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collection: {fileID: 11400000, guid: d99abb00044ca4f508e7e94f55f6a425, type: 2}
+  collection: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1, y: 1, z: 1}
   _spriteId: 2
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Button
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -2071,7 +2071,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: cb3bf0ad5e92744d6856da9a7d5a3125, type: 2}
+    font: {fileID: 0}
     text: QUIT
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994457055a9434b4aa7b65ad37262d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+  _font: {fileID: 0}
   _text: Button
   _color: {r: 1, g: 1, b: 1, a: 1}
   _color2: {r: 1, g: 1, b: 1, a: 1}
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   lineSpacing: 0
   data:
     version: 1
-    font: {fileID: 11400000, guid: fb1b97eccf6db514999d1605baf017e5, type: 2}
+    font: {fileID: 0}
     text: one
     color: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 1, g: 1, b: 1, a: 1}

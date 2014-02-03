@@ -11,6 +11,8 @@ using System;
 using UnityEngine;
 
 public abstract class LevelObject : MonoBehaviour{
+
+
   private LevelController _levelController; 
   public LevelController levelController {
     get {

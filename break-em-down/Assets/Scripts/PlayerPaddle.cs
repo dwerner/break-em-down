@@ -16,6 +16,7 @@ public class PlayerPaddle : LevelObject {
    private TKRotationRecognizer rotater;
    private TKTapRecognizer tapper;
 
+
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
       this.setupGestures();
@@ -74,7 +75,6 @@ public class PlayerPaddle : LevelObject {
    }
 
    IEnumerator GameLoop() {
-      Vector3 pos = transform.position;
 
       while (true) {
          var h = Input.GetAxis("Horizontal");

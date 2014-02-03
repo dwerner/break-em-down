@@ -21,16 +21,28 @@ public class GameBall : LevelObject {
 
    }
 
+   private Transform parent;
+   private Transform paddleTransform;
+
    IEnumerator Start() {
  
+      parent = this.transform.parent;
+      if (paddleTransform == null){
+        paddleTransform = FindObjectOfType<PlayerPaddle>().transform;
+      }
+
       this.levelController.BallOutOfBounds += (object sender) => {
-        this.transform.position = new Vector3(-1f,-3f, 0.5f);
-        this.rigidbody.velocity = new Vector3(0f,0f,0f);
-        Debug.Log("repositioned ball at 0,0,0: "+ this.enabled);
+
+        var paddle = paddleTransform;
+        this.transform.parent = paddle;
+        this.transform.position = new Vector3(paddle.position.x, paddle.position.y + 1f, 0.5f);
+
+        Debug.Log("repositioned and re-parented ball"+ this.enabled);
 
       };
 
       this.levelController.StartPlay += (object sender) => {
+        this.transform.parent = levelController.transform;
         this.go();
       };
 
@@ -45,7 +57,9 @@ public class GameBall : LevelObject {
    }
 
    void FixedUpdate() {
-
+      if (transform.parent == paddleTransform){
+        this.rigidbody.velocity = new Vector3(0f,0f,0f);
+      }
    }
 
 
@@ -73,9 +87,9 @@ public class GameBall : LevelObject {
    }
 
    private void go(){
-      //if (rigidbody.velocity.magnitude <= 0.5){
+      if (rigidbody.velocity.magnitude <= 0.5){
         rigidbody.AddRelativeForce( new Vector3(0, speed*2) );
-      //}
+      }
    }
 
 
