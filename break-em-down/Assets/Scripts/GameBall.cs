@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System; 
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System; 
+
 
 public class GameBall : LevelObject {
 
@@ -10,6 +12,8 @@ public class GameBall : LevelObject {
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
    public AudioClip collisionSound;
+
+    private bool playStopped = false;
 
    private float[] pulseFrames;
    private bool isPulsing = false; //concurrent lock (possible/atomic because concurrency is done via co-routines)
@@ -21,29 +25,33 @@ public class GameBall : LevelObject {
 
    }
 
-   private Transform parent;
    private Transform paddleTransform;
 
    IEnumerator Start() {
  
-      parent = this.transform.parent;
       if (paddleTransform == null){
         paddleTransform = FindObjectOfType<PlayerPaddle>().transform;
       }
 
       this.levelController.BallOutOfBounds += (object sender) => {
+      if (!playStopped){
+          var paddle = paddleTransform;
+          this.transform.parent = paddle;
+          this.transform.position = new Vector3(paddle.position.x, paddle.position.y + 1f, 0.5f);
 
-        var paddle = paddleTransform;
-        this.transform.parent = paddle;
-        this.transform.position = new Vector3(paddle.position.x, paddle.position.y + 1f, 0.5f);
-
-        Debug.Log("repositioned and re-parented ball"+ this.enabled);
-
+          Debug.Log("repositioned and re-parented ball"+ this.enabled);
+        }
       };
 
+    this.levelController.GameOver += (sender, e) => { this.stop(); };
+
+    this.levelController.LevelWon += (sender, e) => { this.stop(); };
+
       this.levelController.StartPlay += (object sender) => {
-        this.transform.parent = levelController.transform;
-        this.go();
+        if (!playStopped) {
+          this.transform.parent = levelController.transform;
+          this.go();
+        }
       };
 
       while (true) {
@@ -56,7 +64,12 @@ public class GameBall : LevelObject {
       }
    }
 
-   void FixedUpdate() {
+  void stop(){
+    this.rigidbody.velocity = new Vector3(0,0,0);
+    playStopped = true;
+  }
+  
+  void FixedUpdate() {
       if (transform.parent == paddleTransform){
         this.rigidbody.velocity = new Vector3(0f,0f,0f);
       }

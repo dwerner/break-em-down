@@ -6,8 +6,6 @@ using System.Linq;
 
 public class LevelController : MonoBehaviour {
 
-  public GameObject inGameMenu;
-
   public event BallOutOfBoundsEventHandler BallOutOfBounds;
   public delegate void BallOutOfBoundsEventHandler(object sender);
 
@@ -16,6 +14,7 @@ public class LevelController : MonoBehaviour {
 
   public event EventHandler GameOver;
   public event EventHandler LevelWon;
+  public event EventHandler LevelStart;
 
   public event StartPlayHandler StartPlay;
   public delegate void StartPlayHandler(object sender);
@@ -38,7 +37,7 @@ public class LevelController : MonoBehaviour {
       "level7"
     };
 
-  private string currentLevel;
+  public string currentLevel;
 
   void Awake(){
     instance = this; // assign value to singleton upon instantiation
@@ -46,23 +45,13 @@ public class LevelController : MonoBehaviour {
 
   IEnumerator Start() {
 
-
-
     this.currentLevel = Application.loadedLevelName;
     Debug.Log(this.currentLevel);
 
+    this.RaiseLevelStart();
+    
     while (true) {
-      if (Input.GetKeyDown(KeyCode.Escape)){
-        if (this.isPaused){
-          this.inGameMenu.SetActive(false);
-          this.Resume();
-          Debug.Log("unpaused");
-        } else {
-          this.Pause();
-          this.inGameMenu.SetActive(true);
-          Debug.Log("pause");
-        }
-      }
+
       yield return null;
     }
   }
@@ -70,13 +59,19 @@ public class LevelController : MonoBehaviour {
   public void RaiseGameOver() {
 
     Debug.Log("-- game over --");
-    Application.LoadLevel("MainMenu");
 
     EventHandler handler = GameOver;
     if (handler != null) {
       handler(this, new System.EventArgs());
     }
 
+    this.StartCoroutine(this.LoadMainMenu());
+   
+  }
+
+  IEnumerator LoadMainMenu(){
+    yield return new WaitForSeconds(5);
+    Application.LoadLevel("MainMenu");
   }
 
   private string getNextLevel(){
@@ -92,13 +87,27 @@ public class LevelController : MonoBehaviour {
   public void RaiseLevelWon() {
 
     Debug.Log("-- level won --");
-    Application.LoadLevel(this.getNextLevel());
 
     EventHandler handler = LevelWon;
     if (handler != null) {
       handler(this, new System.EventArgs());
     }
 
+    this.StartCoroutine(this.loadNextLevel());
+  }
+
+  IEnumerator loadNextLevel(){
+    yield return new WaitForSeconds(3);
+    Application.LoadLevel(this.getNextLevel());
+  }
+
+  public void RaiseLevelStart(){
+    Debug.Log("Level Start");
+    
+    EventHandler handler = LevelStart;
+    if (handler != null) {
+      handler(this, new System.EventArgs());
+    }
   }
 
   public void Pause() {

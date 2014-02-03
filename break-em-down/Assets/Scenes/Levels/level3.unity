@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609486e07fe03e54cb0fc419e8db4c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 387582549}
 --- !u!102 &2654990
 TextMesh:
   serializedVersion: 3
@@ -203,7 +202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultLives: 20
   curLives: 0
-  levelController: {fileID: 387582549}
 --- !u!102 &52804431
 TextMesh:
   serializedVersion: 3
@@ -385,7 +383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &209076301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -428,9 +425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f846e229d94e54b8dc3f68e0d801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 100000, guid: e51925756ffac4611aabf776a488c39a, type: 2}
   inGameMenu: {fileID: 0}
   brickCount: 0
+  currentLevel: 
 --- !u!4 &387582550
 Transform:
   m_ObjectHideFlags: 0
@@ -576,7 +573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &420769532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -632,7 +628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476306341744ea746b72c8d480272ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 387582549}
 --- !u!54 &433502110
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -739,6 +734,88 @@ Transform:
   - {fileID: 695263813}
   - {fileID: 2654988}
   m_Father: {fileID: 387582550}
+--- !u!1 &527430466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 527430470}
+  - 23: {fileID: 527430469}
+  - 102: {fileID: 527430468}
+  - 114: {fileID: 527430467}
+  m_Layer: 0
+  m_Name: DisplayedText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &527430467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527430466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046efcc870c0d4eb5b155807f15a3f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &527430468
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527430466}
+  m_Text: Hello World
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 72
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &527430469
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527430466}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!4 &527430470
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527430466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0717559978, y: 5.09214878, z: -.243895993}
+  m_LocalScale: {x: .102825999, y: .102825999, z: .102825999}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &560755804
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &560755808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -912,7 +988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultLives: 20
   curLives: 0
-  levelController: {fileID: 387582549}
 --- !u!102 &695263815
 TextMesh:
   serializedVersion: 3
@@ -1135,7 +1210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &810926601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1204,7 +1278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  levelController: {fileID: 0}
 --- !u!65 &925219469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1295,7 +1368,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &962957901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1415,7 +1487,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1090318167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1506,7 +1577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1103833935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1585,10 +1655,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angleThreshold: 10
   pulseOnImpact: 0
   pulseAmount: 1.14999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
-  levelController: {fileID: 387582549}
   speed: 150
 --- !u!82 &1125045220
 AudioSource:
@@ -1742,7 +1812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1162053640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1814,7 +1883,6 @@ MonoBehaviour:
   leftLimit: -3
   rightLimit: 3
   touchesExist: 1
-  levelController: {fileID: 0}
 --- !u!1 &1330951610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1330951614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1961,7 +2028,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1383992990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2030,7 +2096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1397653912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2121,7 +2186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1437399663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2264,7 +2328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1536704327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2344,7 +2407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1667491642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2413,7 +2475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  levelController: {fileID: 0}
 --- !u!65 &1731117262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2702,7 +2763,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1972199690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2854,7 +2914,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &2110116887
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609486e07fe03e54cb0fc419e8db4c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
 --- !u!102 &2654990
 TextMesh:
   serializedVersion: 3
@@ -203,6 +202,10 @@ Prefab:
       propertyPath: m_Constraints
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e51925756ffac4611aabf776a488c39a, type: 2}
+      propertyPath: collisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e51925756ffac4611aabf776a488c39a, type: 2}
   m_RootGameObject: {fileID: 997610100}
@@ -249,9 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e247ca3b82b9a408e5d8a2fc3b8b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   defaultLives: 3
-  curLives: 0
+  curLives: 3
 --- !u!102 &52804431
 TextMesh:
   serializedVersion: 3
@@ -361,7 +363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &249719954
 BoxCollider:
@@ -441,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &318026118
 BoxCollider:
@@ -517,8 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f846e229d94e54b8dc3f68e0d801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inGameMenu: {fileID: 0}
   brickCount: 0
+  currentLevel: 
 --- !u!4 &387582550
 Transform:
   m_ObjectHideFlags: 0
@@ -531,6 +531,7 @@ Transform:
   m_Children:
   - {fileID: 997610101}
   - {fileID: 1501957004}
+  - {fileID: 1029758464}
   - {fileID: 462760312}
   - {fileID: 1778116038}
   - {fileID: 433502108}
@@ -663,7 +664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &406934688
 BoxCollider:
@@ -720,7 +720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476306341744ea746b72c8d480272ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
 --- !u!54 &433502110
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -823,7 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &434895662
 BoxCollider:
@@ -1015,7 +1013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &696321648
 BoxCollider:
@@ -1167,7 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &779939005
 BoxCollider:
@@ -1247,7 +1243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &862413800
 BoxCollider:
@@ -1262,45 +1257,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &983125905
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 983125907}
-  - 114: {fileID: 983125906}
-  m_Layer: 0
-  m_Name: TouchKit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &983125906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 983125905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e065ffc7dbca743ee9cef1b5106b0d26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugDrawBoundaryFrames: 0
---- !u!4 &983125907
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 983125905}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &997610100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1269,6 @@ GameObject:
   - 82: {fileID: 1125045220}
   - 114: {fileID: 1125045219}
   - 135: {fileID: 1125045218}
-  - 138: {fileID: 997610102}
   m_Layer: 0
   m_Name: DefaultBall
   m_TagString: Untagged
@@ -1333,15 +1288,6 @@ Transform:
   m_Children:
   - {fileID: 1125045224}
   m_Father: {fileID: 387582550}
---- !u!138 &997610102
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 997610100}
-  m_ConnectedBody: {fileID: 1215925794}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
 --- !u!1 &1014032982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1339,88 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 5dfbfbe1865d64e5d816e31dd5e76477, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1029758463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1029758464}
+  - 23: {fileID: 1029758467}
+  - 102: {fileID: 1029758466}
+  - 114: {fileID: 1029758465}
+  m_Layer: 0
+  m_Name: DisplayedText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029758464
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029758463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.00270796, y: 5.09214926, z: -.243896484}
+  m_LocalScale: {x: .102825888, y: .102825888, z: .102825888}
+  m_Children: []
+  m_Father: {fileID: 387582550}
+--- !u!114 &1029758465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029758463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046efcc870c0d4eb5b155807f15a3f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &1029758466
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029758463}
+  m_Text: Hello World
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 72
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1029758467
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029758463}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!1 &1125045216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,11 +1486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 387582549}
   angleThreshold: 10
   pulseOnImpact: 0
   pulseAmount: 1.39999998
-  collisionSound: {fileID: 0}
+  collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
   speed: 200
 --- !u!82 &1125045220
 AudioSource:
@@ -1560,7 +1587,6 @@ GameObject:
   - 4: {fileID: 1215925791}
   - 114: {fileID: 1215925793}
   - 65: {fileID: 1215925792}
-  - 54: {fileID: 1215925794}
   m_Layer: 0
   m_Name: Player Paddle
   m_TagString: Untagged
@@ -1605,26 +1631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09e93481245545c08be16dce0940f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   speed: 20
   leftLimit: -7.5
   rightLimit: 7.5
   touchesExist: 0
---- !u!54 &1215925794
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1215925790}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 0
 --- !u!1 &1307250309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1307250313
 BoxCollider:
@@ -1770,7 +1779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1380137083
 BoxCollider:
@@ -1839,7 +1847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1388366819
 BoxCollider:
@@ -1930,7 +1937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1388874424
 BoxCollider:
@@ -2073,7 +2079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1652078469
 BoxCollider:
@@ -2309,7 +2314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1929775499
 BoxCollider:
@@ -2417,7 +2421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c465dc3bf33374695fde64b04196de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
   hitPoints: 1
 --- !u!65 &1973832071
 BoxCollider:

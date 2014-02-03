@@ -51,7 +51,7 @@ public class PlayerPaddle : LevelObject {
    }
 
    void rotatePaddle(TKRotationRecognizer r){
-      transform.Rotate(Vector3.up, r.deltaRotation);
+      transform.Rotate(Vector3.forward, r.deltaRotation, Space.World);
 
    }
 
@@ -78,9 +78,17 @@ public class PlayerPaddle : LevelObject {
 
       while (true) {
          var h = Input.GetAxis("Horizontal");
+         var scrollWheel = Input.GetAxis("Mouse ScrollWheel");
          var space = Input.GetKey(KeyCode.Space);
          if (space){
             this.startBall();
+         }
+
+         if (scrollWheel > 0){
+           transform.Rotate(Vector3.forward, 5, Space.World);
+         }
+         if (scrollWheel < 0){
+           transform.Rotate(Vector3.forward, -5, Space.World);
          }
 
          if (h != 0) {

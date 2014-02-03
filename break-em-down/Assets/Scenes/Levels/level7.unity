@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1089340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -220,7 +219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1504991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -275,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609486e07fe03e54cb0fc419e8db4c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 387582549}
 --- !u!102 &2654990
 TextMesh:
   serializedVersion: 3
@@ -386,7 +383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &17404533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -466,7 +462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &39177528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -523,7 +518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultLives: 20
   curLives: 0
-  levelController: {fileID: 387582549}
 --- !u!102 &52804431
 TextMesh:
   serializedVersion: 3
@@ -634,7 +628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &60320297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -714,7 +707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &73394922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -838,7 +830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &179248685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -918,7 +909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &196172900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1054,7 +1044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &201753574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1134,7 +1123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &225956758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1214,7 +1202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &247396397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1294,7 +1281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &269824118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1374,7 +1360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &272229354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1454,7 +1439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &296287638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1565,7 +1549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &311655268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1645,7 +1628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &323859897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1725,7 +1707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &325532547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1805,7 +1786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &331204305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1885,7 +1865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &351380502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1965,7 +1944,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &355682106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2034,7 +2012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  levelController: {fileID: 387582549}
 --- !u!65 &381592548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2088,9 +2065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f846e229d94e54b8dc3f68e0d801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 100000, guid: e51925756ffac4611aabf776a488c39a, type: 2}
   inGameMenu: {fileID: 0}
   brickCount: 0
+  currentLevel: 
 --- !u!4 &387582550
 Transform:
   m_ObjectHideFlags: 0
@@ -2236,7 +2213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &388949949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2316,7 +2292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &403400602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2372,7 +2347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476306341744ea746b72c8d480272ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 387582549}
 --- !u!54 &433502110
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2515,7 +2489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &451088026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2624,7 +2597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &493451864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2693,7 +2665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &508156720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2784,7 +2755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &545171236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2864,7 +2834,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &555325661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2994,7 +2963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &604931815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3074,7 +3042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &615547658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3187,7 +3154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultLives: 20
   curLives: 0
-  levelController: {fileID: 387582549}
 --- !u!102 &695263815
 TextMesh:
   serializedVersion: 3
@@ -3426,7 +3392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &792818689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3506,7 +3471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &838446818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3586,7 +3550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &868592749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3722,7 +3685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &884515269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3802,7 +3764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &890242759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3938,7 +3899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &919585970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4018,7 +3978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &924634229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4098,7 +4057,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &927718363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4178,7 +4136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &946467776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4258,7 +4215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &947131194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4338,7 +4294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &958742336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4418,7 +4373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &961202357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4498,7 +4452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &967401965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4629,7 +4582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1032886927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4709,7 +4661,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1082295356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4789,7 +4740,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1084171217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4869,7 +4819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1097030845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4949,7 +4898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1119423912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5028,10 +4976,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cc203cc0bc4e0f9612d8e1f0c0c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angleThreshold: 10
   pulseOnImpact: 1
   pulseAmount: 1.14999998
   collisionSound: {fileID: 8300000, guid: f669bfce318184b14a2ebe0d64a2d373, type: 3}
-  levelController: {fileID: 387582549}
   speed: 200
 --- !u!82 &1125045220
 AudioSource:
@@ -5185,7 +5133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1125940757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5265,7 +5212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1126708641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5345,7 +5291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1146731772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5425,7 +5370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1148800388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5505,7 +5449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1168429924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5585,7 +5528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1177274402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5713,7 +5655,6 @@ MonoBehaviour:
   leftLimit: -3
   rightLimit: 3
   touchesExist: 1
-  levelController: {fileID: 0}
 --- !u!1 &1222347222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,7 +5710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
-  levelController: {fileID: 0}
 --- !u!65 &1222347225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5860,7 +5800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1227421851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5940,7 +5879,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1228230558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6020,7 +5958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1239123551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6100,7 +6037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1239543046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6154,6 +6090,88 @@ Prefab:
   m_RootGameObject: {fileID: 1222347222}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1262343056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1262343057}
+  - 23: {fileID: 1262343060}
+  - 102: {fileID: 1262343059}
+  - 114: {fileID: 1262343058}
+  m_Layer: 0
+  m_Name: DisplayedText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262343057
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262343056}
+  m_LocalRotation: {x: -0, y: 0, z: .683743, w: -.729722977}
+  m_LocalPosition: {x: 8.60679722, y: -21.413908, z: -.547295034}
+  m_LocalScale: {x: .230738282, y: .230738252, z: .230738327}
+  m_Children: []
+  m_Father: {fileID: 1745609248}
+--- !u!114 &1262343058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262343056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046efcc870c0d4eb5b155807f15a3f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &1262343059
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262343056}
+  m_Text: Hello World
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 1
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 72
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1262343060
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262343056}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!1 &1262453529
 GameObject:
   m_ObjectHideFlags: 0
@@ -6220,7 +6238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1262453533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6300,7 +6317,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1277584790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6380,7 +6396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1293457260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6460,7 +6475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1295399179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6540,7 +6554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1305226410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6620,7 +6633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1311344490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6700,7 +6712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1398294988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6780,7 +6791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1408576709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6860,7 +6870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1448791433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6940,7 +6949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1451867493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7083,7 +7091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1515487361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7219,7 +7226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1525100078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7299,7 +7305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1533622507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7379,7 +7384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1571454437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7515,7 +7519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1617149862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7651,7 +7654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1669658588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7731,7 +7733,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1673273568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7811,7 +7812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1677167494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7891,7 +7891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1702524122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7971,7 +7970,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1711316838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8098,6 +8096,7 @@ Transform:
   - {fileID: 927718360}
   - {fileID: 201753571}
   - {fileID: 1943356427}
+  - {fileID: 1262343057}
   - {fileID: 73394919}
   - {fileID: 961202354}
   - {fileID: 355682103}
@@ -8175,7 +8174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1754762791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8255,7 +8253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1775007179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8419,7 +8416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1788566227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8499,7 +8495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1789756672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8579,7 +8574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1821559182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8659,7 +8653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1836316694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8739,7 +8732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1838635185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8819,7 +8811,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1842334528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8955,7 +8946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1856514761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9107,7 +9097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &1888349366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9187,7 +9176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1903508798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9267,7 +9255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1911565195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9347,7 +9334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1934216903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9427,7 +9413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1943356430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9534,7 +9519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1958197277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9614,7 +9598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &1964947092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9766,7 +9749,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &2007645490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9846,7 +9828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &2039933428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9926,7 +9907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &2060092955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10006,7 +9986,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 3
-  levelController: {fileID: 387582549}
 --- !u!65 &2060651109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10086,7 +10065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  levelController: {fileID: 387582549}
 --- !u!65 &2065505442
 BoxCollider:
   m_ObjectHideFlags: 0

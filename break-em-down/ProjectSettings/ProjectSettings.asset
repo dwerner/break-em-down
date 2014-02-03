@@ -10,8 +10,8 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: ballbreaker
+  companyName: Pewpew Games Inc.
+  productName: Break 'em Down
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -74,6 +74,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   iPhoneBundleIdentifier: com.pewpew.BallBreaker
+  metroEnableIndependentInputSource: 0
+  metroEnableLowLatencyPresentationAPI: 0
   productGUID: 4b52321abba3d45bf895b123d110848b
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
@@ -155,6 +157,7 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols:
     0: "Y\x01"
+    7: 
   metroPackageName: ballbreaker
   metroPackageLogo: 
   metroPackageVersion: 
@@ -176,6 +179,7 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   metroCapabilities: {}
+  metroUnprocessedPlugins: []
   metroCompilationOverrides: 1
   blackberryDeviceAddress: 
   blackberryDevicePassword: 

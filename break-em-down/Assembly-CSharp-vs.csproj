@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Balls.cs" />
      <Compile Include="Assets\Scripts\Brick.cs" />
+     <Compile Include="Assets\Scripts\DisplayText.cs" />
      <Compile Include="Assets\Scripts\EventController.cs" />
      <Compile Include="Assets\Scripts\GameBall.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />

@@ -14,7 +14,7 @@ public class Brick : LevelObject {
 
    IEnumerator OnCollisionEnter (Collision c){
 
-      hitPoints -= 1;
+      hitPoints = 0;
 
       if (hitPoints <= 0) {
 

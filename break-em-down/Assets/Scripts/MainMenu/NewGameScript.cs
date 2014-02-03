@@ -7,6 +7,8 @@ public class NewGameScript : MonoBehaviour {
 
 	void OnMouseUpAsButton(){
       if (levelName.Trim() != string.Empty) {
+         Balls.Reset();
+         Score.Reset();
          Application.LoadLevel(this.levelName);
 
       }

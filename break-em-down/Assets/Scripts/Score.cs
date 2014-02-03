@@ -5,6 +5,10 @@ public class Score : LevelObject {
 
    public static int score = 0;
 
+   public static void Reset(){
+    score = 0;
+   }
+
    void Start() {
 
       if (this.levelController) {
@@ -17,10 +21,6 @@ public class Score : LevelObject {
    }
 
    void Update() {
-      this.updateGUI();
-   }
-
-   void updateGUI() {
       this.GetComponent<TextMesh>().text = "Score: " + score;
    }
 
