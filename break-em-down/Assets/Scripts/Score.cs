@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Score : MonoBehaviour {
+public class Score : LevelObject {
 
    public static int score = 0;
-   public LevelController levelController;
 
    void Start() {
-
-      this.levelController = LevelController.getInstance();
 
       if (this.levelController) {
          this.levelController.BrickDestroyed += (object sender) => this.increaseBy(10);

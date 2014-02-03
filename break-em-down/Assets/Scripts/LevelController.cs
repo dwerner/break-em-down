@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class LevelController : MonoBehaviour {
-  public GameObject ballPrefab;
+
   public GameObject inGameMenu;
 
   public event BallOutOfBoundsEventHandler BallOutOfBounds;
@@ -40,8 +40,14 @@ public class LevelController : MonoBehaviour {
 
   private string currentLevel;
 
+  void Awake(){
+    instance = this; // assign value to singleton upon instantiation
+  }
+
   IEnumerator Start() {
-    LevelController.instance = this;
+
+
+
     this.currentLevel = Application.loadedLevelName;
     Debug.Log(this.currentLevel);
 
@@ -108,18 +114,17 @@ public class LevelController : MonoBehaviour {
 
   public void RaiseBallOutOfBounds() {
     BallOutOfBoundsEventHandler handler = BallOutOfBounds;
-    Debug.Log("ball lost");
+    Debug.Log("RaiseBallOutOfBounds");
 
     if (handler != null) {
       handler(this);
     }
 
-    Instantiate(this.ballPrefab);
   }
 
   public void RaiseStartPlay() {
     StartPlayHandler handler = StartPlay;
-    Debug.Log("play has begun!");
+    Debug.Log("RaiseStartPlay");
     
     if (handler != null) {
       handler(this);
@@ -129,6 +134,7 @@ public class LevelController : MonoBehaviour {
 
   public void RaiseBrickDestroyed() {
 
+    Debug.Log("RaiseBrickDestroyed");
     this.brickCount -= 1;
 
     BrickDestroyedEventHandler handler = BrickDestroyed;

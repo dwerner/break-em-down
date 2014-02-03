@@ -3,15 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System; 
 
-public class GameBall : MonoBehaviour {
+public class GameBall : LevelObject {
 
   
    public float angleThreshold = 10.0f;
    public bool pulseOnImpact = false;
    public float pulseAmount = 1.4f;
    public AudioClip collisionSound;
-
-   public LevelController levelController;
 
    private float[] pulseFrames;
    private bool isPulsing = false; //concurrent lock (possible/atomic because concurrency is done via co-routines)
@@ -20,10 +18,18 @@ public class GameBall : MonoBehaviour {
    void Awake(){
       this.pulseFrames = this.buildPulseFrames();
 
+
    }
 
    IEnumerator Start() {
  
+      this.levelController.BallOutOfBounds += (object sender) => {
+        this.transform.position = new Vector3(-1f,-3f, 0.5f);
+        this.rigidbody.velocity = new Vector3(0f,0f,0f);
+        Debug.Log("repositioned ball at 0,0,0: "+ this.enabled);
+
+      };
+
       this.levelController.StartPlay += (object sender) => {
         this.go();
       };
@@ -67,9 +73,9 @@ public class GameBall : MonoBehaviour {
    }
 
    private void go(){
-      if (rigidbody.velocity.magnitude == 0){
+      //if (rigidbody.velocity.magnitude <= 0.5){
         rigidbody.AddRelativeForce( new Vector3(0, speed*2) );
-      }
+      //}
    }
 
 

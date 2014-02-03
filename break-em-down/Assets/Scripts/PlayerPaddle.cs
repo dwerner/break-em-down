@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Collections;
 
-public class PlayerPaddle : MonoBehaviour {
+public class PlayerPaddle : LevelObject {
    public float speed = 20;
 
    public float leftLimit = -7.5f;
@@ -16,11 +16,8 @@ public class PlayerPaddle : MonoBehaviour {
    private TKRotationRecognizer rotater;
    private TKTapRecognizer tapper;
 
-   public LevelController levelController;
-
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
-      this.levelController = LevelController.getInstance();
       this.setupGestures();
 
       yield return StartCoroutine(this.GameLoop());
@@ -39,7 +36,7 @@ public class PlayerPaddle : MonoBehaviour {
 
       this.panner.gestureRecognizedEvent += this.movePaddle;
       this.rotater.gestureRecognizedEvent += this.rotatePaddle;
-      this.tapper.gestureRecognizedEvent += (obj) => this.startBall;
+      this.tapper.gestureRecognizedEvent += this.startBallEvent;
 
       TouchKit.addGestureRecognizer(this.panner);
       TouchKit.addGestureRecognizer(this.rotater);
@@ -57,16 +54,20 @@ public class PlayerPaddle : MonoBehaviour {
 
    }
 
+   void startBallEvent(TKTapRecognizer r){
+     this.startBall();
+   }
 
-  void startBall() {
-    this.levelController.RaiseStartPlay();
-  }
+   void startBall() {
+     this.levelController.RaiseStartPlay();
+   }
 
 
    void OnDestroy() {
 
       this.panner.gestureRecognizedEvent -= this.movePaddle;
       this.rotater.gestureRecognizedEvent -= this.rotatePaddle;
+      this.tapper.gestureRecognizedEvent -= this.startBallEvent;
 
       TouchKit.removeAllGestureRecognizers();
 

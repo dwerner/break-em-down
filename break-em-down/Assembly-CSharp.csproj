@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\EventController.cs" />
      <Compile Include="Assets\Scripts\GameBall.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\LevelObject.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\MainMenu\NewGameScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu\QuitScript.cs" />

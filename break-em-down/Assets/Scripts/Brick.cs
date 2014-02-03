@@ -2,13 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Brick : MonoBehaviour {
+public class Brick : LevelObject {
 
    public int hitPoints =1;
-   public LevelController levelController;
 
    void Start(){
-      this.levelController = LevelController.getInstance();
       if (levelController != null) {
          levelController.brickCount += 1;
       }

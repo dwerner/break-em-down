@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Balls : MonoBehaviour {
+public class Balls : LevelObject {
 
    public int defaultLives = 3;
    public int curLives;
 
-   public LevelController levelController;
+
 
    // Use this for initialization
    void Start() {
-      this.levelController = LevelController.getInstance();
       curLives = this.defaultLives;
       if (this.levelController) {
          this.levelController.BallOutOfBounds += (object sender) => this.decreaseBy(1);
@@ -34,7 +33,7 @@ public class Balls : MonoBehaviour {
    public void decreaseBy(int amount) {
       this.curLives -= amount;
       if (this.curLives < 0) {
-         levelController.RaiseGameOver();
+        levelController.RaiseGameOver();
       }
    }
 }
