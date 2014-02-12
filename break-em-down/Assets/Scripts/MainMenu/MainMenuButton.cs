@@ -17,7 +17,4 @@ public class MainMenuButton : MonoBehaviour	{
 		this.renderer.material = defaultMaterial;
 	}
 	
-	public MainMenuButton () {
-		
-	}
 }

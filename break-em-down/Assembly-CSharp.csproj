@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\DisplayText.cs" />
      <Compile Include="Assets\Scripts\EventController.cs" />
      <Compile Include="Assets\Scripts\GameBall.cs" />
+     <Compile Include="Assets\Scripts\GlobalMusic.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\LevelObject.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuButton.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Scripts\PlayerPaddle.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\UrlLinkButton.cs" />
      <Compile Include="Assets\Scripts\Utilities\ExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\Utilities\GameController.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />

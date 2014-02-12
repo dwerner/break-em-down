@@ -358,8 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e247ca3b82b9a408e5d8a2fc3b8b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultLives: 20
-  curLives: 0
 --- !u!102 &52804431
 TextMesh:
   serializedVersion: 3
@@ -1707,7 +1705,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 387582550}
   - 114: {fileID: 387582549}
-  - 82: {fileID: 387582551}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -1727,7 +1724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f846e229d94e54b8dc3f68e0d801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inGameMenu: {fileID: 0}
   brickCount: 0
   currentLevel: 
 --- !u!4 &387582550
@@ -1751,64 +1747,6 @@ Transform:
   - {fileID: 1883265924}
   - {fileID: 1945474239}
   m_Father: {fileID: 0}
---- !u!82 &387582551
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 387582548}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a166f442738c44d62844ca72a8e37168, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 4.07697392
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &404011744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,8 +3179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e247ca3b82b9a408e5d8a2fc3b8b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultLives: 20
-  curLives: 0
 --- !u!102 &695263815
 TextMesh:
   serializedVersion: 3
