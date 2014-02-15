@@ -7,7 +7,9 @@ using System.Linq;
 public class LevelController : MonoBehaviour {
 
   public event BallOutOfBoundsEventHandler BallOutOfBounds;
+  public event BallOutOfBoundsEventHandler BeforeBallOutOfBounds;
   public delegate void BallOutOfBoundsEventHandler(object sender);
+  public delegate void BeforeBallOutOfBoundsEventHandler(object sender);
 
   public event BrickDestroyedEventHandler BrickDestroyed;
   public delegate void BrickDestroyedEventHandler(object sender);
@@ -122,11 +124,21 @@ public class LevelController : MonoBehaviour {
 
 
   public void RaiseBallOutOfBounds() {
+
+    BallOutOfBoundsEventHandler beforeHandler = BeforeBallOutOfBounds;
+
+    if (beforeHandler != null){
+      Debug.Log("BeforeRaiseBallOutOfBounds");
+      beforeHandler(this);
+
+    }
+
     BallOutOfBoundsEventHandler handler = BallOutOfBounds;
-    Debug.Log("RaiseBallOutOfBounds");
 
     if (handler != null) {
+      Debug.Log("RaiseBallOutOfBounds");
       handler(this);
+
     }
 
   }
@@ -137,6 +149,7 @@ public class LevelController : MonoBehaviour {
     
     if (handler != null) {
       handler(this);
+
     }
 
   }
@@ -149,11 +162,13 @@ public class LevelController : MonoBehaviour {
     BrickDestroyedEventHandler handler = BrickDestroyed;
     if (handler != null) {
       handler(this);
+
     }
 
     if (this.brickCount == 0) {
       Debug.Log("Out of bricks...");
       this.RaiseLevelWon();
+
     }
   }
 }

@@ -10,23 +10,28 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DisplayText : LevelObject {
 
   private TextMesh textMesh;
 
-  private float delay = 0.5f;
+  private Vector3 initialPosition;
 
+  private float delay = 0.5f;
+  int amt = 0;
   private string textToShow;
 
   IEnumerator Start(){
+
+    initialPosition = this.transform.position;
 
     textMesh = GetComponent<TextMesh>();
 
     levelController.BallOutOfBounds += (object sender) => {
       if (Balls.balls >= 1) {
         delay = 2;
-        textToShow = "Ball Lost";
+        textToShow = "Ball Lost =|";
       }
     };
 
@@ -38,22 +43,34 @@ public class DisplayText : LevelObject {
 
     levelController.GameOver += new EventHandler((obj, arg) => {
       delay = 5;
-      textToShow = "Game Over... :("+ Environment.NewLine +
-                   "Score: " + Score.score; 
+      textToShow = @"Game Over (T.T)"+ Environment.NewLine +
+                   "Total Score: " + Score.score; 
     });
 
     levelController.LevelWon += new EventHandler((obj, arg) => {
       delay = 3;
-      textToShow = "Level Complete!";
+      textToShow = "Level Complete! XD";
     });
 
+    //TODO: int comboMultiplier = 1;
+
     levelController.BrickDestroyed += (o)=>{
+
       delay = 0.4f;
-      int amt = 10;
-      if (textToShow.StartsWith("+")){
-        amt += int.Parse(textToShow);
-      }
-      textToShow = "+"+amt;
+
+      var combo = amt > 0;
+
+      amt += 10;
+
+      int comboAmount = 0;
+      if (combo){
+        comboAmount = (int)(amt * 1.5f);
+      } 
+
+      textToShow = "+" + (amt + comboAmount) + (combo ? " COMBO" : "");
+
+      Score.increaseBy(amt);
+
     };
     
     while(true){
@@ -69,12 +86,18 @@ public class DisplayText : LevelObject {
   IEnumerator showText(string text, float seconds){
     textMesh.text = text;
     Debug.Log("Detected Text being displayed: " + text);
+
     yield return StartCoroutine(this.hideText(seconds));
+
   }
 
   IEnumerator hideText(float seconds) {
-    yield return new WaitForSeconds(seconds);
+    var startTime = DateTime.UtcNow;
+    yield return StartCoroutine(this.Pulse());
+    var delay = seconds - (DateTime.UtcNow - startTime).Seconds; 
+    yield return new WaitForSeconds(delay);
     textMesh.text = "";
+    amt = 0;
   }
 
 }

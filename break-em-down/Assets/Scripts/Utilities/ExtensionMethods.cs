@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public static class ExtensionMethods {
-   /*
+   
    public static IEnumerator Pulse(this MonoBehaviour mb) {
 
          var sizes = new List<float>() {
@@ -20,12 +20,13 @@ public static class ExtensionMethods {
       var initialScale = mb.transform.localScale;
 
       foreach (var i in sizes){
+         Debug.Log("pulsing x "+i);
          mb.transform.localScale = initialScale * i;
          yield return null;
       }
 
       yield return null;
    }
-   */
+
 }
 

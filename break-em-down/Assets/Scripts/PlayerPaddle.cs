@@ -10,6 +10,8 @@ public class PlayerPaddle : LevelObject {
 
    public float rightLimit = 7.5f;
 
+   Quaternion initialRotation;
+
    public bool touchesExist;
 
    private TKPanRecognizer panner;
@@ -20,6 +22,10 @@ public class PlayerPaddle : LevelObject {
    //Changing this into an IEnumerator - so re-entry happens once per frame, and Update is never needed
    IEnumerator Start() {
       this.setupGestures();
+
+      initialRotation = this.transform.rotation;
+
+      levelController.BeforeBallOutOfBounds += (object sender) => this.ResetRotation();
 
       yield return StartCoroutine(this.GameLoop());
    }
@@ -46,16 +52,42 @@ public class PlayerPaddle : LevelObject {
    }
 
    void movePaddle(TKPanRecognizer r){
-      transform.position += new Vector3(r.deltaTranslation.x, 0) / 50;
+      
+      //transform.position += new Vector3(r.deltaTranslation.x, 0) / 50;
+      movePaddle(r.deltaTranslation.x/50);
+   }
+
+  //left is -3 right is 3 
+   void movePaddle(float move){
+    if (this.transform.position.x + move >= this.leftLimit && this.transform.position.x + move <= this.rightLimit) { 
+        this.transform.position += new Vector3(move, 0.0f, 0.0f);
+    
+    }
 
    }
 
    void rotatePaddle(TKRotationRecognizer r){
-      transform.Rotate(Vector3.forward, r.deltaRotation, Space.World);
+    rotatePaddle(r.deltaRotation);   
+
+   }
+
+   public float minimumRotation;
+   public float maximumRotation;
+
+   void rotatePaddle(float d){
+
+    var zAngle = transform.rotation.eulerAngles.z;
+    var zRotation = zAngle+d;
+
+    if (zRotation >= minimumRotation && zRotation <= maximumRotation){
+      transform.Rotate(Vector3.forward, d, Space.World);
+    
+    }
 
    }
 
    void startBallEvent(TKTapRecognizer r){
+     
      this.startBall();
    }
 
@@ -63,6 +95,9 @@ public class PlayerPaddle : LevelObject {
      this.levelController.RaiseStartPlay();
    }
 
+  void ResetRotation(){
+    this.transform.rotation = this.initialRotation;
+  }
 
    void OnDestroy() {
 
@@ -85,10 +120,10 @@ public class PlayerPaddle : LevelObject {
          }
 
          if (scrollWheel > 0){
-           transform.Rotate(Vector3.forward, 5, Space.World);
+           rotatePaddle( 5 );
          }
          if (scrollWheel < 0){
-           transform.Rotate(Vector3.forward, -5, Space.World);
+           rotatePaddle( -5 );
          }
 
          if (h != 0) {
@@ -103,13 +138,9 @@ public class PlayerPaddle : LevelObject {
              * *Note that changing the masses of the targets did have an effect on the kinds of intersections that were allowed before the object rebounds.
              */
             if (Mathf.Abs(h) > 0) {
-               if (!(this.transform.position.x + move < this.leftLimit) &&
-                     !(this.transform.position.x + move > this.rightLimit)) { 
 
-                  this.transform.position += new Vector3(move, 0.0f, 0.0f);
-               } 
+              movePaddle(move);
             }
-
          }
 
          yield return null;
