@@ -58,8 +58,7 @@ public class PlayerPaddle : LevelObject {
   }
 
   void rotatePaddle(TKRotationRecognizer r) {
-    rotatePaddle(r.deltaRotation);   
-
+    rotatePaddle(-r.deltaRotation);   
   }
 
   public float minimumRotation;
