@@ -11,18 +11,15 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
 public class DisplayText : LevelObject {
 
   private TextMesh textMesh;
-
   private Vector3 initialPosition;
-
   private float delay = 0.5f;
   int amt = 0;
   private string textToShow;
 
-  IEnumerator Start(){
+  IEnumerator Start() {
 
     initialPosition = this.transform.position;
 
@@ -43,8 +40,8 @@ public class DisplayText : LevelObject {
 
     levelController.GameOver += new EventHandler((obj, arg) => {
       delay = 5;
-      textToShow = @"Game Over (T.T)"+ Environment.NewLine +
-                   "Total Score: " + Score.score; 
+      textToShow = @"Game Over (T.T)" + Environment.NewLine +
+        "Total Score: " + Score.score; 
     });
 
     levelController.LevelWon += new EventHandler((obj, arg) => {
@@ -54,7 +51,7 @@ public class DisplayText : LevelObject {
 
     //TODO: int comboMultiplier = 1;
 
-    levelController.BrickDestroyed += (o)=>{
+    levelController.BrickDestroyed += (o) => {
 
       delay = 0.4f;
 
@@ -63,7 +60,7 @@ public class DisplayText : LevelObject {
       amt += 10;
 
       int comboAmount = 0;
-      if (combo){
+      if (combo) {
         comboAmount = (int)(amt * 1.5f);
       } 
 
@@ -73,8 +70,8 @@ public class DisplayText : LevelObject {
 
     };
     
-    while(true){
-      if (textToShow != String.Empty){
+    while (true) {
+      if (textToShow != String.Empty) {
         var temp = textToShow;
         textToShow = "";
         yield return StartCoroutine(this.showText(temp, delay));
@@ -83,7 +80,7 @@ public class DisplayText : LevelObject {
     }
   }
 
-  IEnumerator showText(string text, float seconds){
+  IEnumerator showText(string text, float seconds) {
     textMesh.text = text;
     Debug.Log("Detected Text being displayed: " + text);
 

@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class GlobalMusic : MonoBehaviour {
 
   public static AudioSource instance = null;
 
-  void Awake(){
+  void Awake() {
 
     if (instance == null) {
       DontDestroyOnLoad(transform.gameObject);
       instance = GetComponent<AudioSource>();
-      if (instance != null){
+      if (instance != null) {
         instance.Play();
       }
     } else {

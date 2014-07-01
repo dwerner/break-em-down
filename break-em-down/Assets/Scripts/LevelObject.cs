@@ -9,21 +9,22 @@
 // ------------------------------------------------------------------------------
 using System;
 using UnityEngine;
+public abstract class LevelObject : MonoBehaviour {
 
-public abstract class LevelObject : MonoBehaviour{
 
+  private LevelController _levelController;
 
-  private LevelController _levelController; 
   public LevelController levelController {
     get {
-      if (_levelController == null){
+      if (_levelController == null) {
         _levelController = FindObjectOfType<LevelController>();
       }
       return _levelController;
     }
   }
-  void Awake(){
-    if (this.levelController == null){
+
+  void Awake() {
+    if (this.levelController == null) {
       Debug.Log("Could not find levelController from " + this.GetType().Name);
     }
   }
