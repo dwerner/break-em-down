@@ -798,7 +798,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121832332}
-  m_Text: v1.0
+  m_Text: v1.1
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
