@@ -798,7 +798,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121832332}
-  m_Text: v1.1
+  m_Text: v1.2
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -882,76 +882,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1974621493}
   m_RootOrder: 4
---- !u!1 &1340537872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1340537873}
-  - 23: {fileID: 1340537875}
-  - 102: {fileID: 1340537874}
-  m_Layer: 0
-  m_Name: pewpew
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1340537873
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340537872}
-  m_LocalRotation: {x: -0, y: 0, z: .00396545231, w: -.999992132}
-  m_LocalPosition: {x: -1.32753527, y: 1.24793041, z: -.268459886}
-  m_LocalScale: {x: .259709626, y: .215236008, z: .270599008}
-  m_Children: []
-  m_Father: {fileID: 1798502654}
-  m_RootOrder: 0
---- !u!102 &1340537874
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340537872}
-  m_Text: http://pewpew.in
-  m_OffsetZ: 0
-  m_CharacterSize: .300000012
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 55
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 771c37a065fd545f0bfa8ebebfe6db7e, type: 3}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
---- !u!23 &1340537875
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340537872}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 771c37a065fd545f0bfa8ebebfe6db7e, type: 3}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!1 &1508390698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,10 +1056,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1798502652}
   m_LocalRotation: {x: 0, y: 0, z: -.193467095, w: -.981106758}
-  m_LocalPosition: {x: .12455897, y: -8.80239773, z: 0}
+  m_LocalPosition: {x: .195066869, y: -8.61437416, z: 0}
   m_LocalScale: {x: 1.04192901, y: 1.04192603, z: 1}
-  m_Children:
-  - {fileID: 1340537873}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1798502655

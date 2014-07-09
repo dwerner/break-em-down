@@ -27,6 +27,8 @@ public class LevelController : MonoBehaviour {
     return instance;
   }
 
+  // when new scenes are added to the project, add them here 
+  // (or be clever and load a list of them and refactor this out)
   private List<string> levels =
     new List<string>(){
       "level1", 
@@ -35,7 +37,8 @@ public class LevelController : MonoBehaviour {
       "level4",
       "level5",
       "level6",
-      "level7"
+      "level7",
+      "level8"
     };
   public string currentLevel;
 
